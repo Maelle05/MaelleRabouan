@@ -381,16 +381,37 @@ h2{
 
       .worksContener{
         flex-direction: column;
+        margin-top: 0;
     }
 
     .work{
         width: 85vw;
-        height: 25vh;
+        height: 30vh;
     }
 
     .work2{
         width: 85vw;
-        height: 25vh;
+        height: 30vh;
+    }
+
+    .filter{
+      background-color:rgba(135, 46, 74, 0.2);
+      color: white;
+     }
+    .titreFiltre {
+        opacity: 1;
+        font-size: 7vw;
+    }
+    
+    .workFiltretitre {
+        opacity: 1;
+        font-size: 5vw;
+    }
+    
+    .btwork {
+        opacity: 1;
+        font-size: 4vw;
+        margin-top: 10vh;
     }
 
     .titrePage{
@@ -435,11 +456,8 @@ h2{
       font-size: 2.5vw;
       top: 7vh;
       left: 7vw;
-      color: #360940;
-    }
-
-
-      
+      color: #360940; 
+    }    
 }
 
 

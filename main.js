@@ -12,8 +12,6 @@ const fleche_menu = document.getElementById('flecheTips')
 const tips_menu = document.getElementById('tips')
 
 let largeurPage = window.innerWidth
-console.log(largeurPage)
-
 
 btn_burger.addEventListener(
     'click',
@@ -192,7 +190,6 @@ b1010010.addEventListener(
 
 const menuTel = (bla)=>{
     if (bla == true){
-        console.log('class hide')
         for (let btON = 0; btON < btActif.length; btON++) {
             btActif[btON].classList.remove('contenuNone')
             btActif[btON].classList.add('contenuBlock')
@@ -202,7 +199,6 @@ const menuTel = (bla)=>{
         tips_menu.classList.remove('contenuNone')
         tips_menu.classList.add('contenuBlock')
     }else{
-        console.log('pas de class hide')
         for (let btOFF = 0; btOFF < btActif.length; btOFF++) {
             btActif[btOFF].classList.remove('contenuBlock')
             btActif[btOFF].classList.add('contenuNone')
@@ -215,7 +211,6 @@ const menuTel = (bla)=>{
 }
 
 if(window.innerWidth<480) {
-    console.log('window')
     for (let btOFF = 0; btOFF < btActif.length; btOFF++) {
         btActif[btOFF].classList.remove('contenuBlock')
         btActif[btOFF].classList.add('contenuNone')
