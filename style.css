@@ -121,7 +121,7 @@ h2{
     border-radius: 30px;
     width: 35vw;
     height: 35vh;
-    background-color: tomato;
+    background-color: #F05F57;
 }
 
 .work2{
@@ -129,7 +129,7 @@ h2{
     border-radius: 30px;
     width: 28vw;
     height: 35vh;
-    background-color: tomato;
+    background-color: #F05F57;
 }
 .titrePage{
     font-family: 'Poppins', sans-serif;
@@ -462,7 +462,7 @@ h2{
       color: #360940; 
     }
     .elementMenu{
-      margin:15vh 4vw 0 0vw;
+      margin:12vh 4vw 0 0vw;
     } 
 
     .meTips{

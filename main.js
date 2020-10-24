@@ -62,12 +62,14 @@ const btActif = [cHome, cDevWeb, cMoDes, cVidGam, cVideo, cInfLog, cOther, cBook
 // PAGES WORKS
 
 const w1010010 = document.getElementById('contenuWork1010010')
+const wETPO = document.getElementById('contenuWorkETPO')
 
-const pagesWorks = [w1010010]
+const pagesWorks = [w1010010, wETPO]
 
 // BOUTONS WORKS 
 
 const b1010010 = document.getElementById('w1010010')
+const bETPO = document.getElementById('wETPO')
 
 function changePage(page, btMenu) {
     menulowd.classList.add('hide')
@@ -186,6 +188,13 @@ b1010010.addEventListener(
     () => {
         changePage(w1010010, cVidGam)
     });
+
+bETPO.addEventListener(
+    "click",
+    () => {
+        changePage(wETPO, cMoDes)
+    });
+
 
 
 const menuTel = (bla)=>{
