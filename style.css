@@ -416,6 +416,7 @@ h2{
 
     .titrePage{
         margin-top: 10vh;
+        font-size: 5vw;
     }
 
     .titre_site{
@@ -427,12 +428,14 @@ h2{
     }
 
     .categorieMenu{
-        font-size: 4vw;
+        font-size: 4.6vw;
+        margin-left: 5vh;
+        margin-top: 3vh;
     }
 
     .btMenuOn{
         border-bottom: none;
-        font-size: 4vw;
+        font-size: 4.6vw;
         transition-duration: 500ms;
         transition-property: margin-left;
     }
@@ -457,7 +460,21 @@ h2{
       top: 7vh;
       left: 7vw;
       color: #360940; 
-    }    
+    }
+    .elementMenu{
+      margin:15vh 4vw 0 0vw;
+    } 
+
+    .meTips{
+      font-size: 4.5vw;
+      margin-left: 20vw;
+    }
+    #svgFleche {
+      margin: 0 0 0 20vw;
+      width: 4vw;
+      height: 15vh;
+     }
+    
 }
 
 
