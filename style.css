@@ -468,13 +468,16 @@ h2{
     .meTips{
       font-size: 4.5vw;
       margin-left: 20vw;
+      margin-top: -3vh;
     }
     #svgFleche {
       margin: 0 0 0 20vw;
       width: 4vw;
       height: 15vh;
      }
-    
+    .btMenuOn{
+      margin-top: 3vh;
+    }
 }
 
 
