@@ -214,6 +214,20 @@ h2{
     background-position: center;
 }
 
+#wGaveBleu{
+  background-image: url(assets/Mockup_GavéBleu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wCodageDecodage{
+  background-image: url(assets/CodageEtDecodage.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .hide{
     width: 100vw;
 }

@@ -69,7 +69,9 @@ const pagesWorks = [w1010010, wETPO]
 // BOUTONS WORKS 
 
 const b1010010 = document.getElementById('w1010010')
+const b1010010p = document.getElementById('w1010010p')
 const bETPO = document.getElementById('wETPO')
+
 
 function changePage(page, btMenu) {
     menulowd.classList.add('hide')
@@ -136,6 +138,8 @@ cVidGam.addEventListener(
     "click", 
     () => { 
         changePage(pageVideoGame, cVidGam)
+        $('#contenuDevWeb').load('devWeb.html');
+        console.log('load')
     });
 
 cVideo.addEventListener(
@@ -188,6 +192,12 @@ b1010010.addEventListener(
     () => {
         changePage(w1010010, cVidGam)
     });
+
+// b1010010p.addEventListener(
+//     "click",
+//     () => {
+//         changePage(w1010010, cVidGam)
+//     });
 
 bETPO.addEventListener(
     "click",
