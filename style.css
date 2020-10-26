@@ -101,6 +101,10 @@ h2{
     position: absolute;
     left: 22vw;
 }
+.soustitreW{
+  display: flex;
+  flex-direction: row;
+}
 
 .titreTrais{
     width: 15vw;
@@ -111,11 +115,62 @@ h2{
     
 }
 
+.soustitreTrais{
+    width: 4vw;
+    height: 0.3vh;
+    margin-left: 25vw;
+    margin-top: 3vh;
+    background-color: #B64550;
+    display: block
+}
+
+.soustitrePage{
+  color: #B64550;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  font-size: 1.7vw;
+  margin-left: 2vw;
+}
+
+.btnVoirwork{
+  color: #B64550;
+  font-family: 'Poppins', sans-serif;
+  border: solid 2px;
+  padding: 1vh 0 1vh 1vw;
+  width: 10vw;
+  font-size: 1vw;
+  margin: 2vh 0 2vh 50vw ;
+  cursor: pointer;
+}
+
 .worksContener{
     margin-top: 2vh;
     display: flex;
     flex-direction: row;
 }
+
+.team{
+  margin: 2vh 0 10vh 10vw;
+}
+
+.teamRow{
+  display: flex;
+  flex-direction: row;
+}
+.teamMember{
+  margin: 1vh 3vw 1vh 3vw;
+}
+
+.teamMember p {
+  text-align: center;
+  color: #B64550;
+  font-family: 'Poppins', sans-serif;
+}
+.infoWorkC{
+  display: flex;
+  flex-direction: row;
+}
+
 .work{
     margin: 2vh 0 0 2vw;
     border-radius: 30px;
@@ -131,6 +186,30 @@ h2{
     height: 35vh;
     background-color: #F05F57;
 }
+
+.infoWork{
+  margin: 2vh 0 0 2vw;
+  width: 28vw;
+  height: 35vh;
+  color: #B64550;
+}
+
+.infoWorkC h4{
+  width: 12vw;
+}
+
+.infoWork p {
+  margin-top: 2vh;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5vw;
+}
+
+h4{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vw;
+  
+}
+
 .titrePage{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -237,6 +316,20 @@ h2{
 
 .hide{
     width: 100vw;
+}
+
+.presWork{
+  width: 65vw;
+  margin-top: 5vh;
+}
+
+.presWork p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1vw;
+}
+
+.wVideo{
+  margin: 5vh 0 5vh 17vw;
 }
 
 @media all and (max-device-width: 480px)
@@ -498,6 +591,61 @@ h2{
      }
     .btMenuOn{
       margin-top: 3vh;
+    }
+
+    .infoWork{
+      width: 100vw;
+      height: 20vh;
+    }
+    .infoWorkC{
+      margin-top: 1vh;
+    }
+    
+    .infoWork p {
+      font-size: 3vw;
+      margin-top: 1vh;
+    }
+    .infoWork h4{
+      width: 40vw;
+      font-size: 5vw;
+    }
+
+    .presWork{
+      margin-left: 2.4vw;
+      width: 80vw;
+      margin-top: 0.4vh;
+    }
+    
+    .presWork p {
+      font-size: 3vw;
+    }
+
+    #Telecharge1010010{
+      display: none;
+    }
+
+    .soustitreTrais{
+      width: 15vw;
+    }
+
+    .soustitrePage{
+      font-size: 5vw;
+      margin-top: 1vh;
+    }
+    .team{
+      margin-left: 0;
+    }
+    .teamMember img {
+      width: 50%;
+    }
+    .teamMember p {
+      font-size: 2vw;
+      margin-left: -50%;
+    }
+
+    .wVideo{
+      margin-left: 0;
+      width: 90%;
     }
 }
 

@@ -72,6 +72,10 @@ const b1010010 = document.getElementById('w1010010')
 const b1010010p = document.getElementById('w1010010p')
 const bETPO = document.getElementById('wETPO')
 
+// BOUTONS 
+
+const Telecharge1010010 = document.getElementById('Telecharge1010010')
+
 
 function changePage(page, btMenu) {
     menulowd.classList.add('hide')
@@ -203,6 +207,11 @@ bETPO.addEventListener(
         changePage(wETPO, cMoDes)
     });
 
+Telecharge1010010.addEventListener(
+    "click",
+    () => {
+        alert('Sorry !😥 Cette fonction n\'est pas encore disponible ... ')
+    });
 
 
 const menuTel = (bla)=>{
