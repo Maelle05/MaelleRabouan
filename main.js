@@ -65,8 +65,9 @@ const w1010010 = document.getElementById('contenuWork1010010')
 const wETPO = document.getElementById('contenuWorkETPO')
 const wGaveBleu = document.getElementById('contenuGaveBleu')
 const wCodageDecodage = document.getElementById('contenuWorkCodageDecodage')
+const wMuseeAqu = document.getElementById('contenuMuseeAqu')
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage]
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu]
 
 // BOUTONS WORKS 
 
@@ -78,6 +79,7 @@ const bGaveBleu = document.getElementById('wGaveBleu')
 const bGaveBleup = document.getElementById('wGaveBleup')
 const bCodageDeco = document.getElementById('wCodageDecodage')
 const bCodageDecop = document.getElementById('wCodageDecodagep')
+const bMuseeAqu = document.getElementById('wMuseeAqu')
 
 // BOUTONS 
 
@@ -242,6 +244,12 @@ bGaveBleup.addEventListener(
         changePage(wGaveBleu, cDevWeb)
     });
 
+bMuseeAqu.addEventListener(
+    "click",
+    () => {
+        changePage(wMuseeAqu, cDevWeb)
+    });
+
 Telecharge1010010.addEventListener(
     "click",
     () => {
@@ -282,3 +290,4 @@ if(window.innerWidth<480) {
     tips_menu.classList.add('contenuNone')
     }
 
+    

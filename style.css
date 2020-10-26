@@ -340,6 +340,13 @@ h4{
   background-position: center;
 }
 
+#wMuseeAqu{
+  background-image: url(assets/Mockup_MuseeAquitaine.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .hide{
     width: 100vw;
 }
@@ -357,6 +364,35 @@ h4{
 .wVideo{
   margin: 5vh 0 5vh 17vw;
 }
+
+#linkedin{
+  margin: 8vh 5vw 5vw 5vw;
+}
+#mail{
+  margin: 8vh 5vw 5vw 5vw;
+}
+#phone-call{
+  margin: 8vh 5vw 5vw 5vw;
+}
+.imageContact{
+  width: 20vw;
+  margin-left: 24vw;
+}
+
+.contactContener{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  margin-left: 14vw;
+}
+
+.tipsContact{
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2vw;
+  margin-left: 50vw;
+  text-align: center;
+}
+
 
 @media all and (max-device-width: 480px)
 {
@@ -684,8 +720,27 @@ h4{
       width: 20vw;
     }
 
-    .docPDFetpo{
-      display: none;
+    .contactContener{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10vh;
+      margin-left: 0;
+    }
+
+    #linkedin{
+      margin: 1vh 5vw 5vw 35vw;
+    }
+    #mail{
+      margin: 1vh 5vw 5vw 35vw;
+    }
+    #phone-call{
+      margin: 1vh 5vw 5vw 35vw;
+    }
+
+    .imageContact{
+      width: 40vw;
+      margin-left: 25vw;
+      margin-top: 2vh;
     }
 }
 
