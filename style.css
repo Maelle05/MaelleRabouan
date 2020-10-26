@@ -207,6 +207,13 @@ h2{
     background-position: center;
 }
 
+#w1010010p{
+  background-image: url(assets/Mockup_1010010.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #wETPO{
     background-image: url(assets/Mockup_ETPO.jpg);
     background-repeat: no-repeat;

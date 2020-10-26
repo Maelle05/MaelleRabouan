@@ -138,8 +138,6 @@ cVidGam.addEventListener(
     "click", 
     () => { 
         changePage(pageVideoGame, cVidGam)
-        $('#contenuDevWeb').load('devWeb.html');
-        console.log('load')
     });
 
 cVideo.addEventListener(
@@ -193,11 +191,11 @@ b1010010.addEventListener(
         changePage(w1010010, cVidGam)
     });
 
-// b1010010p.addEventListener(
-//     "click",
-//     () => {
-//         changePage(w1010010, cVidGam)
-//     });
+b1010010p.addEventListener(
+    "click",
+    () => {
+        changePage(w1010010, cVidGam)
+    });
 
 bETPO.addEventListener(
     "click",
