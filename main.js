@@ -63,14 +63,21 @@ const btActif = [cHome, cDevWeb, cMoDes, cVidGam, cVideo, cInfLog, cOther, cBook
 
 const w1010010 = document.getElementById('contenuWork1010010')
 const wETPO = document.getElementById('contenuWorkETPO')
+const wGaveBleu = document.getElementById('contenuGaveBleu')
+const wCodageDecodage = document.getElementById('contenuWorkCodageDecodage')
 
-const pagesWorks = [w1010010, wETPO]
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage]
 
 // BOUTONS WORKS 
 
 const b1010010 = document.getElementById('w1010010')
 const b1010010p = document.getElementById('w1010010p')
 const bETPO = document.getElementById('wETPO')
+const bETPOp = document.getElementById('wETPOp')
+const bGaveBleu = document.getElementById('wGaveBleu')
+const bGaveBleup = document.getElementById('wGaveBleup')
+const bCodageDeco = document.getElementById('wCodageDecodage')
+const bCodageDecop = document.getElementById('wCodageDecodagep')
 
 // BOUTONS 
 
@@ -205,6 +212,34 @@ bETPO.addEventListener(
     "click",
     () => {
         changePage(wETPO, cMoDes)
+    });
+bETPOp.addEventListener(
+    "click",
+    () => {
+        changePage(wETPO, cMoDes)
+    });
+
+bGaveBleu.addEventListener(
+    "click",
+    () => {
+        changePage(wGaveBleu, cDevWeb)
+    });
+
+bCodageDeco.addEventListener(
+    "click",
+    () => {
+        changePage(wCodageDecodage, cMoDes)
+    });
+bCodageDecop.addEventListener(
+    "click",
+    () => {
+        changePage(wCodageDecodage, cMoDes)
+    });
+
+bGaveBleup.addEventListener(
+    "click",
+    () => {
+        changePage(wGaveBleu, cDevWeb)
     });
 
 Telecharge1010010.addEventListener(
