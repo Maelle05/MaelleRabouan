@@ -66,8 +66,13 @@ const wETPO = document.getElementById('contenuWorkETPO')
 const wGaveBleu = document.getElementById('contenuGaveBleu')
 const wCodageDecodage = document.getElementById('contenuWorkCodageDecodage')
 const wMuseeAqu = document.getElementById('contenuMuseeAqu')
+const wUXUI = document.getElementById('contenuUXUI')
+const wNightMaze = document.getElementById('contenuNightMaze')
+const wShowTime = document.getElementById('contenuShowTime')
+const wEcoNum = document.getElementById('contenuEcoNum')
+const wAFE = document.getElementById('contenuLogoAFE')
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu]
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE]
 
 // BOUTONS WORKS 
 
@@ -80,6 +85,11 @@ const bGaveBleup = document.getElementById('wGaveBleup')
 const bCodageDeco = document.getElementById('wCodageDecodage')
 const bCodageDecop = document.getElementById('wCodageDecodagep')
 const bMuseeAqu = document.getElementById('wMuseeAqu')
+const bUXUI = document.getElementById('wUXUI')
+const bNightMaze = document.getElementById('wNightMaze')
+const bShowTime = document.getElementById('wShowTime')
+const bEcoNum = document.getElementById('wEcoNum')
+const bAFE = document.getElementById('wAFE')
 
 // BOUTONS 
 
@@ -248,6 +258,36 @@ bMuseeAqu.addEventListener(
     "click",
     () => {
         changePage(wMuseeAqu, cDevWeb)
+    });
+
+bUXUI.addEventListener(
+    "click",
+    () => {
+        changePage(wUXUI, cDevWeb)
+    });
+
+bNightMaze.addEventListener(
+    "click",
+    () => {
+        changePage(wNightMaze, cVidGam)
+    });
+
+bShowTime.addEventListener(
+    "click",
+    () => {
+        changePage(wShowTime, cVideo)
+    });
+
+bEcoNum.addEventListener(
+    "click",
+    () => {
+        changePage(wEcoNum, cInfLog)
+    });
+
+bAFE.addEventListener(
+    "click",
+    () => {
+        changePage(wAFE, cInfLog)
     });
 
 Telecharge1010010.addEventListener(

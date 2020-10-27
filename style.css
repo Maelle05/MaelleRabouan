@@ -169,6 +169,7 @@ h2{
 .infoWorkC{
   display: flex;
   flex-direction: row;
+  
 }
 
 .work{
@@ -185,6 +186,22 @@ h2{
     width: 28vw;
     height: 35vh;
     background-color: #F05F57;
+}
+
+.work3{
+  margin: 2vh 0 0 2vw;
+  border-radius: 30px;
+  width: 28vw;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TipsMeDevWeb{
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 1.5vw;
+  color: #360940;
 }
 
 .infoWork{
@@ -347,6 +364,41 @@ h4{
   background-position: center;
 }
 
+#wUXUI{
+  background-image: url(assets/Mockup_UXUI.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wNightMaze{
+  background-image: url(assets/Mockup_NightMaze.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wShowTime{
+  background-image: url(assets/Mockup_ShowTime.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wEcoNum{
+  background-image: url(assets/Mockup_EcoNum.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wAFE{
+  background-image: url(assets/Mockup_AFE.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .hide{
     width: 100vw;
 }
@@ -359,6 +411,14 @@ h4{
 .presWork p {
   font-family: 'Raleway', sans-serif;
   font-size: 1vw;
+}
+
+.presMe{
+  width: 57vw;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2vw;
 }
 
 .wVideo{
@@ -391,6 +451,28 @@ h4{
   font-size: 2vw;
   margin-left: 50vw;
   text-align: center;
+}
+
+.AboutMeContener{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  margin-left: 2vw;
+}
+
+.AboutMeImg{
+  margin: 3vw;
+  width: 15vw;
+}
+
+.ImgP{
+  margin-top: -6vh;
+  margin-bottom: 16vh;
+}
+
+.imgWork{
+  width: 50vw;
+  margin-left: 8vw;
 }
 
 
@@ -570,6 +652,11 @@ h4{
         height: 30vh;
     }
 
+    .work3{
+      width: 85vw;
+      height: 30vh;
+    }
+
     .filter{
       background-color:rgba(135, 46, 74, 0.2);
       color: white;
@@ -741,6 +828,40 @@ h4{
       width: 40vw;
       margin-left: 25vw;
       margin-top: 2vh;
+    }
+
+    .AboutMeContener{
+      margin-top: 10vh;
+      margin-left: 4vw;
+    }
+    
+    .AboutMeImg{
+      margin: 3vw;
+      width: 20vw;
+    }
+    
+    .ImgP{
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 25vw;
+    }
+
+    .presMe{
+      font-size: 2.5vw;
+      width: 80vw;
+    }
+
+    .noneTelbtn{
+      display: none;
+    }
+
+    .TipsMeDevWeb{
+      font-size: 6vw;
+    }
+
+    .imgWork{
+      width: 50vw;
+      margin-left: 20vw;
     }
 }
 
