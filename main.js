@@ -5,6 +5,37 @@ window.addEventListener(
     },
  false);
 
+ function loader(){
+	var gifContainer = document.querySelector('.loading');
+	gifContainer.classList.add('none');
+}
+
+window.onload = loader;
+
+function extraire()
+    {
+        if( ++i < message.length ){  // On incremente i et on compare a la taille du message.
+            // Si i ne depasse pas le nombre de caracteres dans le message
+            // Note : le premier caractere de la chaine commence a l'index 0
+            if( message[i] == '\n' ){
+                // Si saut de ligne on remplace par l'equivalent HTML : "<br/>".
+                document.getElementById("msg").innerHTML += '<br/>';
+            } else {
+                // Sinon on ajoute simplement le caractere a l'emplacement courant.
+                document.getElementById("msg").innerHTML += message[i];
+            }
+        } else {
+            // Sinon on arrete le timer car le texte a fini de s'afficher.
+            clearTimeout(interval);
+        }
+    }
+        
+    var i = -1; // On incremente i en debut de fonction, il vaudra donc 0 a la premiere execution.
+    var message = "Maëlle Rabouan \n Web Développeuse"; // Message a afficher, on utilise le caractere \n pour le retour a la ligne.
+    var interval = setInterval(extraire, 120); // On declanche le timer et on le garde dans une variable pour l'arreter plus tard.
+
+extraire()
+
 // MENU BURGER 
 
 const btn_burger = document.getElementById('btn_burger')
@@ -71,8 +102,9 @@ const wNightMaze = document.getElementById('contenuNightMaze')
 const wShowTime = document.getElementById('contenuShowTime')
 const wEcoNum = document.getElementById('contenuEcoNum')
 const wAFE = document.getElementById('contenuLogoAFE')
+const wPetra = document.getElementById('contenuPetra')
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE]
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra]
 
 // BOUTONS WORKS 
 
@@ -90,6 +122,7 @@ const bNightMaze = document.getElementById('wNightMaze')
 const bShowTime = document.getElementById('wShowTime')
 const bEcoNum = document.getElementById('wEcoNum')
 const bAFE = document.getElementById('wAFE')
+const bPetra = document.getElementById('wPetra')
 
 // BOUTONS 
 
@@ -288,6 +321,12 @@ bAFE.addEventListener(
     "click",
     () => {
         changePage(wAFE, cInfLog)
+    });
+
+bPetra.addEventListener(
+    "click",
+    () => {
+        changePage(wPetra, cVideo)
     });
 
 Telecharge1010010.addEventListener(
