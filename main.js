@@ -9,7 +9,7 @@ window.addEventListener(
 	var gifContainer = document.querySelector('.loading');
 	gifContainer.classList.add('none');
 }
-
+/*
 window.onload = loader;
 
 function extraire()
@@ -34,7 +34,7 @@ function extraire()
     var message = "Maëlle Rabouan \n Web Développeuse"; // Message a afficher, on utilise le caractere \n pour le retour a la ligne.
     var interval = setInterval(extraire, 120); // On declanche le timer et on le garde dans une variable pour l'arreter plus tard.
 
-extraire()
+extraire()*/
 
 // MENU BURGER 
 
