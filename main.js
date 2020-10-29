@@ -5,10 +5,13 @@ window.addEventListener(
     },
  false);
 
+
+
+/*
  function loader(){
 	var gifContainer = document.querySelector('.loading');
-	gifContainer.classList.add('none');
-}
+    gifContainer.classList.add('none'); }
+    */
 /*
 window.onload = loader;
 
