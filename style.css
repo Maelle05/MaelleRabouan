@@ -506,6 +506,16 @@ h4{
   margin-left: 8vw;
 }
 
+.CVcontener{
+  width: 160%;
+}
+
+.cv{
+  width: 70%;
+  height: 100vh;
+  margin: 10vh 0 10vh 10vw;
+}
+
 
 @media all and (max-device-width: 480px)
 {
@@ -896,6 +906,12 @@ h4{
     }
     .loading{
       font-size: 300%;
+    }
+
+    .cv{
+      width: 50vw;
+      height: 40vh;
+      margin: 10vh 0 10vh 0;
     }
 }
 
