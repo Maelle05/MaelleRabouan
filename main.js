@@ -106,8 +106,10 @@ const wShowTime = document.getElementById('contenuShowTime')
 const wEcoNum = document.getElementById('contenuEcoNum')
 const wAFE = document.getElementById('contenuLogoAFE')
 const wPetra = document.getElementById('contenuPetra')
+const wDiscover = document.getElementById('contenuDiscover')
+const wConitif = document.getElementById('contenuConitif')
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra]
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wConitif]
 
 // BOUTONS WORKS 
 
@@ -116,7 +118,6 @@ const b1010010p = document.getElementById('w1010010p')
 const bETPO = document.getElementById('wETPO')
 const bETPOp = document.getElementById('wETPOp')
 const bGaveBleu = document.getElementById('wGaveBleu')
-const bGaveBleup = document.getElementById('wGaveBleup')
 const bCodageDeco = document.getElementById('wCodageDecodage')
 const bCodageDecop = document.getElementById('wCodageDecodagep')
 const bMuseeAqu = document.getElementById('wMuseeAqu')
@@ -126,6 +127,9 @@ const bShowTime = document.getElementById('wShowTime')
 const bEcoNum = document.getElementById('wEcoNum')
 const bAFE = document.getElementById('wAFE')
 const bPetra = document.getElementById('wPetra')
+const bDiscover = document.getElementById('wDiscover')
+const bDiscoverp = document.getElementById('wDiscoverp')
+const bConitif = document.getElementById('wConitif')
 
 // BOUTONS 
 
@@ -284,12 +288,6 @@ bCodageDecop.addEventListener(
         changePage(wCodageDecodage, cMoDes)
     });
 
-bGaveBleup.addEventListener(
-    "click",
-    () => {
-        changePage(wGaveBleu, cDevWeb)
-    });
-
 bMuseeAqu.addEventListener(
     "click",
     () => {
@@ -330,6 +328,23 @@ bPetra.addEventListener(
     "click",
     () => {
         changePage(wPetra, cVideo)
+    });
+
+bDiscover.addEventListener(
+    "click",
+    () => {
+        changePage(wDiscover, cDevWeb)
+    });
+bDiscoverp.addEventListener(
+    "click",
+    () => {
+        changePage(wDiscover, cDevWeb)
+    });
+
+bConitif.addEventListener(
+    "click",
+    () => {
+        changePage(wConitif, cVidGam)
     });
 
 Telecharge1010010.addEventListener(

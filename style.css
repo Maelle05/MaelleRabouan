@@ -360,13 +360,6 @@ h4{
   background-position: center;
 }
 
-#wGaveBleup{
-  background-image: url(assets/Mockup_GavéBleu.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 #wCodageDecodage{
   background-image: url(assets/CodageEtDecodage.PNG);
   background-repeat: no-repeat;
@@ -425,6 +418,27 @@ h4{
 
 #wPetra{
   background-image: url(assets/Mockup_Petra.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wDiscover{
+  background-image: url(assets/Mockup_Discover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wDiscoverp{
+  background-image: url(assets/Mockup_Discover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wConitif{
+  background-image: url(assets/Mockup_Conitif.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
