@@ -367,13 +367,6 @@ h4{
   background-position: center;
 }
 
-#wCodageDecodagep{
-  background-image: url(assets/CodageEtDecodage.PNG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 #wMuseeAqu{
   background-image: url(assets/Mockup_MuseeAquitaine.png);
   background-repeat: no-repeat;
@@ -439,6 +432,27 @@ h4{
 
 #wConitif{
   background-image: url(assets/Mockup_Conitif.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wVV{
+  background-image: url(assets/Mockup_VV.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wVVp{
+  background-image: url(assets/Mockup_VV.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wRetV{
+  background-image: url(assets/Mockup_RetV.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

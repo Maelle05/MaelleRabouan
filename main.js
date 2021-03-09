@@ -108,8 +108,12 @@ const wAFE = document.getElementById('contenuLogoAFE')
 const wPetra = document.getElementById('contenuPetra')
 const wDiscover = document.getElementById('contenuDiscover')
 const wConitif = document.getElementById('contenuConitif')
+const wVV = document.getElementById('contenuVV')
+const wRetV = document.getElementById('contenuRetV')
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wConitif]
+
+
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wConitif, wVV, wRetV]
 
 // BOUTONS WORKS 
 
@@ -119,7 +123,6 @@ const bETPO = document.getElementById('wETPO')
 const bETPOp = document.getElementById('wETPOp')
 const bGaveBleu = document.getElementById('wGaveBleu')
 const bCodageDeco = document.getElementById('wCodageDecodage')
-const bCodageDecop = document.getElementById('wCodageDecodagep')
 const bMuseeAqu = document.getElementById('wMuseeAqu')
 const bUXUI = document.getElementById('wUXUI')
 const bNightMaze = document.getElementById('wNightMaze')
@@ -130,6 +133,10 @@ const bPetra = document.getElementById('wPetra')
 const bDiscover = document.getElementById('wDiscover')
 const bDiscoverp = document.getElementById('wDiscoverp')
 const bConitif = document.getElementById('wConitif')
+const bVV = document.getElementById('wVV')
+const bVVp = document.getElementById('wVVp')
+const bRetV = document.getElementById('wRetV')
+
 
 // BOUTONS 
 
@@ -345,6 +352,24 @@ bConitif.addEventListener(
     "click",
     () => {
         changePage(wConitif, cVidGam)
+    });
+
+bVV.addEventListener(
+    "click",
+    () => {
+        changePage(wVV, cDevWeb)
+    });
+
+bVVp.addEventListener(
+    "click",
+    () => {
+        changePage(wVV, cDevWeb)
+    });
+
+bRetV.addEventListener(
+    "click",
+    () => {
+        changePage(wRetV, cDevWeb)
     });
 
 Telecharge1010010.addEventListener(
