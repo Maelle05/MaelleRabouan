@@ -289,11 +289,6 @@ bCodageDeco.addEventListener(
     () => {
         changePage(wCodageDecodage, cMoDes)
     });
-bCodageDecop.addEventListener(
-    "click",
-    () => {
-        changePage(wCodageDecodage, cMoDes)
-    });
 
 bMuseeAqu.addEventListener(
     "click",
@@ -342,6 +337,7 @@ bDiscover.addEventListener(
     () => {
         changePage(wDiscover, cDevWeb)
     });
+    
 bDiscoverp.addEventListener(
     "click",
     () => {
