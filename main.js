@@ -110,10 +110,12 @@ const wDiscover = document.getElementById('contenuDiscover')
 const wConitif = document.getElementById('contenuConitif')
 const wVV = document.getElementById('contenuVV')
 const wRetV = document.getElementById('contenuRetV')
+const wWMAY = document.getElementById('contenuWMAY')
 
 
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wConitif, wVV, wRetV]
+
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wConitif, wVV, wRetV, wWMAY]
 
 // BOUTONS WORKS 
 
@@ -136,6 +138,8 @@ const bConitif = document.getElementById('wConitif')
 const bVV = document.getElementById('wVV')
 const bVVp = document.getElementById('wVVp')
 const bRetV = document.getElementById('wRetV')
+const bWMAY = document.getElementById('wWMAY')
+
 
 
 // BOUTONS 
@@ -337,7 +341,7 @@ bDiscover.addEventListener(
     () => {
         changePage(wDiscover, cDevWeb)
     });
-    
+
 bDiscoverp.addEventListener(
     "click",
     () => {
@@ -366,6 +370,12 @@ bRetV.addEventListener(
     "click",
     () => {
         changePage(wRetV, cDevWeb)
+    });
+
+bWMAY.addEventListener(
+    "click",
+    () => {
+        changePage(wWMAY, cOther)
     });
 
 Telecharge1010010.addEventListener(

@@ -458,6 +458,13 @@ h4{
   background-position: center;
 }
 
+#wWMAY{
+  background-image: url(assets/Mockup_WMAY.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .hide{
     width: 100vw;
 }
@@ -544,6 +551,10 @@ h4{
   margin: 10vh 0 10vh 10vw;
 }
 
+.imgQR{
+  width: 190px;
+  margin: 20px;
+}
 
 @media all and (max-device-width: 480px)
 {
