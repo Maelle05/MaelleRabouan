@@ -107,7 +107,6 @@ const wEcoNum = document.getElementById('contenuEcoNum')
 const wAFE = document.getElementById('contenuLogoAFE')
 const wPetra = document.getElementById('contenuPetra')
 const wDiscover = document.getElementById('contenuDiscover')
-const wConitif = document.getElementById('contenuConitif')
 const wVV = document.getElementById('contenuVV')
 const wRetV = document.getElementById('contenuRetV')
 const wWMAY = document.getElementById('contenuWMAY')
@@ -115,7 +114,7 @@ const wWMAY = document.getElementById('contenuWMAY')
 
 
 
-const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wConitif, wVV, wRetV, wWMAY]
+const pagesWorks = [w1010010, wETPO, wGaveBleu, wCodageDecodage, wMuseeAqu, wUXUI, wNightMaze, wShowTime, wEcoNum, wAFE, wPetra, wDiscover, wVV, wRetV, wWMAY]
 
 // BOUTONS WORKS 
 
@@ -134,7 +133,6 @@ const bAFE = document.getElementById('wAFE')
 const bPetra = document.getElementById('wPetra')
 const bDiscover = document.getElementById('wDiscover')
 const bDiscoverp = document.getElementById('wDiscoverp')
-const bConitif = document.getElementById('wConitif')
 const bVV = document.getElementById('wVV')
 const bVVp = document.getElementById('wVVp')
 const bRetV = document.getElementById('wRetV')
@@ -346,12 +344,6 @@ bDiscoverp.addEventListener(
     "click",
     () => {
         changePage(wDiscover, cDevWeb)
-    });
-
-bConitif.addEventListener(
-    "click",
-    () => {
-        changePage(wConitif, cVidGam)
     });
 
 bVV.addEventListener(
