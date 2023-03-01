@@ -7,16 +7,39 @@
   <title>Maëlle Rabouan</title>
 </head>
 <body>
-  <img src="./asset/moi.png" draggable="false">
-  <h1>MAËLLE RABOUAN</h1>
-  <h2>Creative developer & Student at <a href="https://www.gobelins.fr/"  target="_blank" > Gobelins Paris </a></h2>
-  <div>
-    <a href="https://twitter.com/maelle_rabouan" target="_blank"><img src="./asset/twitter.png" draggable="false" ></a>
-    <a href="https://github.com/Maelle05" target="_blank"><img src="./asset/github.png" draggable="false" ></a>
-    <a href="mailto::maelle.rabouan@gmail.com" target="_blank"><img src="./asset/e-mail.png" draggable="false" ></a>
+  <div id="first">
+    <img src="./asset/moi.png" draggable="false">
+    <h1>MAËLLE RABOUAN</h1>
+    <h2>Creative developer & Student at <a href="https://www.gobelins.fr/"  target="_blank" > Gobelins Paris </a></h2>
+    <div class="contact">
+      <a href="https://twitter.com/maelle_rabouan" target="_blank"><img src="./asset/twitter.png" draggable="false" ></a>
+      <a href="https://github.com/Maelle05" target="_blank"><img src="./asset/github.png" draggable="false" ></a>
+      <a href="mailto::maelle.rabouan@gmail.com" target="_blank"><img src="./asset/e-mail.png" draggable="false" ></a>
+    </div>
   </div>
+  <!-- <span id="btn" >see my projects ?</span> -->
 </body>
 </html>
+<script>
+// const span = document.querySelector('span#btn');
+let isProjects = false;
+
+const first = document.querySelector('div#first');
+
+// span.addEventListener('click', toogle)
+
+function toogle(){
+  if (isProjects) {
+    span.innerHTML = 'see my projects ?'
+    first.classList.remove('hidden')
+  } else {
+    span.innerHTML = 'see contact me ?'
+    first.classList.add('hidden')
+  }
+
+  isProjects = !isProjects
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap');
@@ -28,13 +51,8 @@
 
 body{
   background-color: whitesmoke;
-  height: 100vh;
+  height: calc(100vh - 40px);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 20px;
 }
 body::after{
@@ -49,29 +67,40 @@ body::after{
   pointer-events: none;
 }
 
-body > img{
+#first{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  transform: translateY(0);
+  transition: .3s transform;
+}
+
+#first > img{
   border-radius: 99999px;
   width: 150px;
   margin-bottom: 15px;
   user-select: none;
 }
 
-h1{
+#first > h1{
   font-family: 'Archivo Black', sans-serif;
 }
-h2{
+#first > h2{
   font-family: 'Questrial', sans-serif;
   font-size: 20px;
   margin-top: 5px;
 }
 
-h2 > a {
+#first > h2 > a {
   position: relative;
   color: black;
   text-decoration: none;
 }
 
-h2 > a::after {
+#first > h2 > a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -81,11 +110,11 @@ h2 > a::after {
   transition: .3s width;
 }
 
-h2 > a:hover::after {
+#first > h2 > a:hover::after {
   width: 126px;
 }
 
-div{
+#first > div.contact{
   margin-top: 10px;
   width: 150px;
   display: flex;
@@ -94,13 +123,43 @@ div{
   align-items: center;
 }
 
-div > a > img {
+#first > div.contact > a > img {
   width: 30px;
   transform: scale(1);
   transition: .3s transform;
 }
 
-div > a > img:hover {
+#first > div.contact > a > img:hover {
   transform: scale(1.1) rotate(-360deg);
+}
+
+#first.hidden{
+  transform: translate(-100% , -20%) rotate(-90deg);
+}
+
+span{
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 57.7655px);
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+
+span::before{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  transform: translate(-1px, 17px);
+  background-color: black;
+  z-index: 0;
+  transition: .3s width;
+}
+
+span:hover::before{
+  width: 117px;
 }
 </style>
