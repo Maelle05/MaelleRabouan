@@ -5,161 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maëlle Rabouan</title>
+  <link href="style.css" rel="stylesheet">
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.skypack.dev/three@0.149.0/build/three.module",
+        "three/": "https://cdn.skypack.dev/three@0.149.0/"   
+      }
+    }
+  </script>
 </head>
 <body>
+  <canvas id="webgl"></canvas>
   <div id="first">
-    <img src="./asset/moi.png" draggable="false">
+    <img src="./assets/moi.png" draggable="false">
     <h1>MAËLLE RABOUAN</h1>
     <h2>Creative developer & Student at <a href="https://www.gobelins.fr/"  target="_blank" > Gobelins Paris </a></h2>
     <div class="contact">
-      <a href="https://twitter.com/maelle_rabouan" target="_blank"><img src="./asset/twitter.png" draggable="false" ></a>
-      <a href="https://github.com/Maelle05" target="_blank"><img src="./asset/github.png" draggable="false" ></a>
-      <a href="mailto::maelle.rabouan@gmail.com" target="_blank"><img src="./asset/e-mail.png" draggable="false" ></a>
+      <a href="https://twitter.com/maelle_rabouan" target="_blank"><img src="./assets/twitter.png" draggable="false" ></a>
+      <a href="https://github.com/Maelle05" target="_blank"><img src="./assets/github.png" draggable="false" ></a>
+      <a href="mailto::maelle.rabouan@gmail.com" target="_blank"><img src="./assets/e-mail.png" draggable="false" ></a>
     </div>
   </div>
   <!-- <span id="btn" >see my projects ?</span> -->
 </body>
+<script src="main.js" type="module"></script>
 </html>
-<script>
-// const span = document.querySelector('span#btn');
-let isProjects = false;
-
-const first = document.querySelector('div#first');
-
-// span.addEventListener('click', toogle)
-
-function toogle(){
-  if (isProjects) {
-    span.innerHTML = 'see my projects ?'
-    first.classList.remove('hidden')
-  } else {
-    span.innerHTML = 'see contact me ?'
-    first.classList.add('hidden')
-  }
-
-  isProjects = !isProjects
-}
-</script>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  background-color: whitesmoke;
-  height: calc(100vh - 40px);
-  overflow: hidden;
-  padding: 20px;
-}
-body::after{
-  content: "";
-  background-image: url(./asset/bg_texture.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.5;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-}
-
-#first{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  transform: translateY(0);
-  transition: .3s transform;
-}
-
-#first > img{
-  border-radius: 99999px;
-  width: 150px;
-  margin-bottom: 15px;
-  user-select: none;
-}
-
-#first > h1{
-  font-family: 'Archivo Black', sans-serif;
-}
-#first > h2{
-  font-family: 'Questrial', sans-serif;
-  font-size: 20px;
-  margin-top: 5px;
-}
-
-#first > h2 > a {
-  position: relative;
-  color: black;
-  text-decoration: none;
-}
-
-#first > h2 > a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #2C2C2C;
-  transform: translateY(19px) translateX(-126px);
-  transition: .3s width;
-}
-
-#first > h2 > a:hover::after {
-  width: 126px;
-}
-
-#first > div.contact{
-  margin-top: 10px;
-  width: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-#first > div.contact > a > img {
-  width: 30px;
-  transform: scale(1);
-  transition: .3s transform;
-}
-
-#first > div.contact > a > img:hover {
-  transform: scale(1.1) rotate(-360deg);
-}
-
-#first.hidden{
-  transform: translate(-100% , -20%) rotate(-90deg);
-}
-
-span{
-  font-family: 'Questrial', sans-serif;
-  font-size: 15px;
-  position: absolute;
-  bottom: 20px;
-  left: calc(50% - 57.7655px);
-  cursor: pointer;
-  color: black;
-  z-index: 1;
-}
-
-span::before{
-  content: "";
-  display: block;
-  height: 1px;
-  width: 0;
-  transform: translate(-1px, 17px);
-  background-color: black;
-  z-index: 0;
-  transition: .3s width;
-}
-
-span:hover::before{
-  width: 117px;
-}
-</style>
