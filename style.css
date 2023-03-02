@@ -17,7 +17,9 @@ body{
   height: calc(100vh - 40px);
   overflow: hidden;
   padding: 20px;
+  cursor: none;
 }
+
 body::after{
   content: "";
   background-image: url(./assets/bg_texture.png);
@@ -28,6 +30,24 @@ body::after{
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+}
+
+#cursor{
+  position: absolute;
+  top: -100%;
+  left: -100%;
+
+  transition: .3s opacity;
+  animation: cursor 1s infinite alternate;
+}
+
+@keyframes cursor {
+  from { transform: rotate(15deg); }
+  to   { transform: rotate(-25deg); }
+}
+
+#cursor > img{
+  width: 20px;
 }
 
 #first{
