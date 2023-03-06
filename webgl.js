@@ -74,7 +74,7 @@ export default class WebGlManager {
     this.renderer = new THREE.WebGLRenderer({ canvas: canvas })
     this.renderer.setSize(this.size.width, this.size.height)
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    this.renderer.setClearColorHex( 0xf5f5f5, 1 );
+    this.renderer.setClearColor( 0xf5f5f5, 1 );
     this.scene = new THREE.Scene()
     this.camera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5,-0.5,-1000, 1000)
     this.camera.position.set(0, 0, 1)
