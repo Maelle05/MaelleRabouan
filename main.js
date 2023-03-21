@@ -6,15 +6,15 @@ let mouse = 'up';
 const cursor = document.querySelector('#cursor')
 
 window.addEventListener('resize', () => webgl.resize())
-window.addEventListener('mousemove', (e) => {
+window.addEventListener('pointermove', (e) => {
   cursor.style.top = `calc(${e.clientY}px - 10px)`
   cursor.style.left = `calc(${e.clientX}px - 10px)`
   if(mouse === 'down') webgl.updateMouse(e)
 })
-window.addEventListener('mouseup', () => {
+window.addEventListener('pointerup', () => {
   mouse = 'up'
 })
-window.addEventListener('mousedown', () => {
+window.addEventListener('pointerdown', () => {
   webgl.resetMouse()
   mouse = 'down'
 })
