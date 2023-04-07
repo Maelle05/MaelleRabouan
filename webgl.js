@@ -87,6 +87,13 @@ export default class WebGlManager {
     this.scene.add(this.camera)
     this.ready = false
     this.initScene()
+
+
+    setInterval(()=>{
+      this.lastPosMouse = this.lastPosMouse.slice(2)
+      this.lastPosMouse.push(15, 15)
+      this.uniforms.uLastsMouse.value = this.lastPosMouse
+    }, 5) 
   }
 
   updateMouse(e){
