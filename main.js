@@ -35,8 +35,8 @@ projects.forEach((project)=>{
   project.addEventListener('mouseover', ()=>{
     projects.forEach((e)=>{
       e.style.opacity = '0.60'
-      project.querySelector('video').currentTime = 0
-      project.querySelector('video').pause()
+      e.querySelector('video').currentTime = 0
+      e.querySelector('video').pause()
     })
     project.style.opacity = '1'
     project.querySelector('video').play()
