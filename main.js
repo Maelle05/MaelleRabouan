@@ -1,5 +1,4 @@
 import WebGlManager from "./webgl.js";
-import LocomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll";
 
 const webgl = new WebGlManager(document.querySelector('#webgl'));
 
@@ -21,6 +20,34 @@ document.querySelectorAll('a').forEach((link)=>{
   })
 })
 
+document.querySelectorAll('#scroll').forEach((link)=>{
+  link.addEventListener('mouseover', ()=>{
+    cursor.style.opacity = '0'
+  })
+  link.addEventListener('mouseout', ()=>{
+    cursor.style.opacity = '1'
+  })
+})
+
+const projects = document.querySelectorAll('#second a')
+
+projects.forEach((project)=>{
+  project.addEventListener('mouseover', ()=>{
+    projects.forEach((e)=>{
+      e.style.opacity = '0.60'
+    })
+    project.style.opacity = '1'
+    project.querySelector('video').play()
+  })
+  project.addEventListener('mouseout', ()=>{
+    projects.forEach((e)=>{
+      e.style.opacity = '1'
+    })
+    project.querySelector('video').currentTime = 0
+    project.querySelector('video').pause()
+  })
+})
+
 const tick = () =>
 {
   if (webgl.ready) webgl.tick()
@@ -33,7 +60,15 @@ tick()
 
 // Smooth scroll
 
-new LocomotiveScroll({
-  el: document.querySelector(".container"),
-  smooth: true
-}); 
+const lenis = new Lenis()
+
+document.querySelector('#scroll').addEventListener('click', () => {
+  lenis.scrollTo(document.querySelector('#second'), { offset: -100})
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

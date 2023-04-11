@@ -8,7 +8,8 @@
   <link href="style.css" rel="stylesheet">
   <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+  <script src="./assets/js/luge.js"></script>
   <script type="importmap">
     {
       "imports": {
@@ -20,9 +21,10 @@
 </head>
 <body>
   <div id="cursor"><img src="./assets/brush_icon.png" draggable="false" ></div>
+  <div id="scroll">Scroll</div>
   <canvas id="webgl"></canvas>
-  <div class="container" data-scroll-container>
-    <div id="first" data-scroll-section>
+  <div class="container">
+    <div id="first">
       <img src="./assets/moi.png" draggable="false">
       <h1>MAËLLE RABOUAN</h1>
       <h2>Creative developer & Student at <a href="https://www.gobelins.fr/"  target="_blank" > Gobelins Paris </a></h2>
@@ -32,27 +34,25 @@
         <a href="mailto::maelle.rabouan@gmail.com" target="_blank"><img src="./assets/e-mail.png" draggable="false" ></a>
       </div>
     </div>
-    <div id="second" data-scroll-section>
+    <div id="second">
       <div>
-        <a href="https://more-than-honey.netlify.app/" target="_blank" data-scroll data-scroll-speed="2">
-          <video src="./assets/videos/MTH.mp4" muted autoplay loop></video>
+        <a href="https://more-than-honey.netlify.app/" target="_blank" data-lg-parallax data-lg-parallax-amplitude="0.5">
+          <video src="./assets/videos/MTH.mp4" muted></video>
           <h3>More than honey <img src="./assets/external-link.png" alt="" srcset=""></h3>
           <p>3D immersive and interactive tale</p>
         </a>
-        <a href="https://metro-orsay.netlify.app/" target="_blank" data-scroll data-scroll-speed="4">
-          <video src="./assets/videos/METRO.mp4" muted autoplay loop></video>
-          <h3>L'Odyssée secrète des Arches du Métro <img src="./assets/external-link.png" alt="" srcset=""></h3>
-          <p>Parallax story - History of the Paris subway</p>
+        <a href="https://metro-orsay.netlify.app/" target="_blank" data-lg-parallax data-lg-parallax-amplitude="0.5">
+          <video src="./assets/videos/METRO.mp4" muted></video>
+          <h3>L'Odyssée du Métro <img src="./assets/external-link.png" alt="" srcset=""></h3>
+          <p>Interactive story - History of the Paris subway</p>
         </a>
-      </div>
-      <div>
-        <a href="https://visisco.netlify.app/" target="_blank" data-scroll data-scroll-speed="3">
-          <video src="./assets/videos/VISISCO.mp4" muted autoplay loop></video>
+        <a href="https://visisco.netlify.app/" target="_blank" data-lg-parallax data-lg-parallax-amplitude="0.5">
+          <video src="./assets/videos/VISISCO.mp4" muted></video>
           <h3>Visisco <img src="./assets/external-link.png" alt="" srcset=""></h3>
           <p>3D Sound viewer - Shaders experiment</p>
         </a>
-        <a href="https://webgl-just-reveal.netlify.app/" target="_blank" data-scroll data-scroll-speed="4">
-          <video src="./assets/videos/COVID.mp4" muted autoplay loop></video>
+        <a href="https://webgl-just-reveal.netlify.app/" target="_blank" data-lg-parallax data-lg-parallax-amplitude="0.5">
+          <video src="./assets/videos/COVID.mp4" muted></video>
           <h3>Covid trends <img src="./assets/external-link.png" alt="" srcset=""></h3>
           <p>3D Data visualisation</p>
         </a>

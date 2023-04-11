@@ -52,6 +52,19 @@ body::after{
   width: 20px;
 }
 
+#scroll {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+}
+
+#scroll:hover{
+  cursor: pointer;
+}
+
 .container{
   position: absolute;
   top: 0;
@@ -128,24 +141,32 @@ body::after{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 200px;
 }
 
 #second > div {
-  width: 80%;
+  width: 72%;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  /* background-color: blue; */
+  gap: 70px;
 }
 
 #second video{
-  max-width: 450px;
+  max-width: 100%;
   transition: transform .3s ease-in-out;
+}
+
+#second > div {
+  margin-bottom: 40px;
 }
 
 #second > div > a{
   text-decoration: none;
   color: #2C2C2C;
+  width: 440px;
+  transition: opacity .5s ease;
 }
 
 #second h3{
@@ -164,7 +185,7 @@ body::after{
   font-family: 'Questrial', sans-serif;
   transition: transform .3s ease-in-out;
 }
-
+/* 
 #second > div > a:hover > video{
   transform: scale(1.02);
 }
@@ -175,32 +196,43 @@ body::after{
 
 #second > div > a:hover > h3{
   transform: scale(1.02) translateY(4px);
-}
+} */
 
 #second > div > a:hover > h3 > img{
   opacity: .85;
 }
 
 @media screen and (max-width: 1200px) {
-  #second a{
-    max-width: 370px;
-  }
-
-  #second video{
-    max-width: 100%;
+  #second div{
+    width: 90%;
   }
 }
 
-@media screen and (max-width: 1050px) {
-  #second a{
-    max-width: none;
+@media screen and (max-width: 1056px) {
+  #scroll {
+    bottom: 15px;
+    right: 15px;
+    font-size: 12px;
   }
-  
+
   #second > div {
-    flex-direction: column;
+    /* align-items: center; */
   }
 
   #second > div > a {
+    width: 50%;
     margin-bottom: 50px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  #second > div > a {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  #second > div {
+    gap: 10px;
   }
 }
