@@ -44,9 +44,9 @@ projects.forEach((project)=>{
   project.addEventListener('mouseout', ()=>{
     projects.forEach((e)=>{
       e.style.opacity = '1'
+      e.querySelector('video').play()
     })
     project.querySelector('video').currentTime = 0
-    project.querySelector('video').pause()
   })
 })
 
