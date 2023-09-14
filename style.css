@@ -166,7 +166,7 @@ body::after{
   text-decoration: none;
   color: #2C2C2C;
   width: 440px;
-  transition: opacity .5s ease;
+  transition: filter .5s ease;
 }
 
 #second h3{
