@@ -47,29 +47,30 @@ if (isMobileDevice) {
       })
     })
 }
+if (isMobileDevice) {
+  const projects = document.querySelectorAll('#second a')
 
-const projects = document.querySelectorAll('#second a')
-
-projects.forEach((project)=>{
-  project.addEventListener('mouseover', ()=>{
-    projects.forEach((e)=>{
-      // e.style.filter = "grayscale(" + 100 + "%)"
-      e.querySelector('video').currentTime = 0
-      e.querySelector('video').pause()
+  projects.forEach((project)=>{
+    project.addEventListener('mouseover', ()=>{
+      projects.forEach((e)=>{
+        // e.style.filter = "grayscale(" + 100 + "%)"
+        e.querySelector('video').currentTime = 0
+        e.querySelector('video').pause()
+      })
+      // project.style.opacity = '1'
+      // project.style.filter = "grayscale(" + 0 + "%)"
+      project.querySelector('video').play()
     })
-    // project.style.opacity = '1'
-    // project.style.filter = "grayscale(" + 0 + "%)"
-    project.querySelector('video').play()
-  })
-  project.addEventListener('mouseout', ()=>{
-    projects.forEach((e)=>{
-      // e.style.filter = "grayscale(" + 0 + "%)"
-      // e.style.opacity = '1'
-      e.querySelector('video').play()
+    project.addEventListener('mouseout', ()=>{
+      projects.forEach((e)=>{
+        // e.style.filter = "grayscale(" + 0 + "%)"
+        // e.style.opacity = '1'
+        e.querySelector('video').play()
+      })
+      project.querySelector('video').currentTime = 0
     })
-    project.querySelector('video').currentTime = 0
   })
-})
+}
 
 const tick = () =>
 {
