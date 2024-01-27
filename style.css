@@ -232,6 +232,10 @@ body::after{
     margin-bottom: 50px;
   }
 
+  #second > div > a > h3 > img{
+    display: none;
+  }
+
   #second > div {
     gap: 10px;
   }
