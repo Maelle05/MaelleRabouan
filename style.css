@@ -98,13 +98,19 @@ body::after{
   margin-top: 5px;
 }
 
-#first > h2 > a {
+#first > h3{
+  font-family: 'Questrial', sans-serif;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+#first > h3 > a {
   position: relative;
   color: black;
   text-decoration: none;
 }
 
-#first > h2 > a::after {
+#first > h3 > a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -114,7 +120,7 @@ body::after{
   transition: .3s width;
 }
 
-#first > h2 > a:hover::after {
+#first > h3 > a:hover::after {
   width: 126px;
 }
 
@@ -137,20 +143,22 @@ body::after{
   transform: scale(1.1) rotate(-360deg);
 }
 
-#second {
+#container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 200px;
 }
 
-#second > div {
-  width: 72%;
+#second {
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   /* background-color: blue; */
-  gap: 70px;
+  gap: 65px;
+  margin-top: 200px;
+  margin-bottom: 40px;
 }
 
 #second video{
@@ -159,13 +167,12 @@ body::after{
 }
 
 #second > div {
-  margin-bottom: 40px;
+  width: 440px;
 }
 
 #second > div > a{
   text-decoration: none;
   color: #2C2C2C;
-  width: 440px;
   transition: filter .5s ease;
 }
 
@@ -185,58 +192,7 @@ body::after{
   font-family: 'Questrial', sans-serif;
   transition: transform .3s ease-in-out;
 }
-/* 
-#second > div > a:hover > video{
-  transform: scale(1.02);
-}
-
-#second > div > a:hover > p{
-  transform: scale(1.02) translateY(4px);
-}
-
-#second > div > a:hover > h3{
-  transform: scale(1.02) translateY(4px);
-} */
 
 #second > div > a:hover > h3 > img{
   opacity: .85;
-}
-
-@media screen and (max-width: 1200px) {
-  #second div{
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 1056px) {
-  #scroll {
-    bottom: 15px;
-    right: 15px;
-    font-size: 12px;
-  }
-
-  #second > div {
-    /* align-items: center; */
-  }
-
-  #second > div > a {
-    width: 50%;
-    margin-bottom: 50px;
-  }
-}
-
-
-@media screen and (max-width: 500px) {
-  #second > div > a {
-    width: 80%;
-    margin-bottom: 50px;
-  }
-
-  #second > div > a > h3 > img{
-    display: none;
-  }
-
-  #second > div {
-    gap: 10px;
-  }
 }
