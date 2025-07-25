@@ -170,7 +170,7 @@ body::after {
   right: 0;
   top: 0;
   padding: 3px 5px;
-  border: solid #2c2c2c;
+  border: solid 1.5px #2c2c2c;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
 }
@@ -189,10 +189,6 @@ body::after {
   margin: 10px 0 0 0;
   line-height: 20px;
   transition: transform 0.3s ease-in-out;
-}
-
-#second > div > a:hover > h3 > img {
-  opacity: 0.85;
 }
 
 .links_container {
