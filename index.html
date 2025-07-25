@@ -18,24 +18,24 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script src="./assets/js/luge.js"></script>
-    <script type="importmap">
+    <!-- <script type="importmap">
       {
         "imports": {
           "three": "https://cdn.skypack.dev/three@0.149.0/build/three.module",
           "three/": "https://cdn.skypack.dev/three@0.149.0/"
         }
       }
-    </script>
+    </script> -->
   </head>
   <body>
-    <div id="cursor">
+    <!-- <div id="cursor">
       <img src="./assets/brush_icon.png" draggable="false" />
-    </div>
+    </div> -->
     <div id="scroll">Scroll</div>
-    <canvas id="webgl"></canvas>
+    <!-- <canvas id="webgl"></canvas> -->
     <div class="container">
       <div id="first">
-        <img src="./assets/moi.png" draggable="false" />
+        <img src="./assets/moi2.png" draggable="false" />
         <h1>MAËLLE RABOUAN</h1>
         <h2>Creative developer</h2>
         <h3>
@@ -58,8 +58,15 @@
       <div id="container">
         <div id="second">
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
-            <img src="./assets/videos/AUTOFOCUS.png" alt="" srcset="" />
-            <h3>(WIP) Autofocus</h3>
+            <!-- <img src="./assets/videos/AUTOFOCUS.png" alt="" srcset="" /> -->
+            <video
+              src="./assets/videos/AUTOFOCUS.mp4"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+            <h3>(WIP) Autofocus <a target="_blank" href="https://www.femmefatale.paris/fr">FFS</a></h3>
             <p>3D educational website for art gallery creation</p>
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
@@ -70,13 +77,23 @@
               loop
               playsinline
             ></video>
-            <a href="https://cote-780.netlify.app/" target="_blank">
-              <h3>
-                Cote 780
-                <img src="./assets/external-link.png" alt="" srcset="" />
-              </h3>
-              <p>Interactive 3D narration of a region's history</p>
-            </a>
+            <h3>
+              Cote 780
+              <a target="_blank" href="https://www.gobelins.fr/">Gobelins</a>
+            </h3>
+            <p>Interactive 3D narration of a region's history</p>
+            <div class="links_container">
+                <a
+                  href="https://cote-780.netlify.app/"
+                  target="_blank"
+                  class="arrow-right"
+                  >Web site</span
+                ></a>
+
+              <a href="https://drive.google.com/file/d/1ymhJ3aBtLSAE81oBzRsqtYGFCsy9-S2J/view?usp=sharing" target="_blank" class="arrow-right"
+                >Documentation</span
+              ></a>
+            </div>
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -86,16 +103,19 @@
               loop
               playsinline
             ></video>
-            <a
-              href="https://www.femmefatale.paris/fr/project/persona-ar"
-              target="_blank"
-            >
               <h3>
                 Kamen - Persona
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="https://www.femmefatale.paris/fr">FFS</a>
               </h3>
               <p>AR Narration told on your faces</p>
-            </a>
+            <div class="links_container">
+              <a
+                href="https://www.femmefatale.paris/fr/project/persona-ar"
+                target="_blank"
+                class="arrow-right"
+                >Documentation</a
+              >
+            </div>
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -105,13 +125,27 @@
               loop
               playsinline
             ></video>
-            <a href="https://olympicmedalrush.com/" target="_blank">
               <h3>
                 Olympic medal rush
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="https://www.gobelins.fr/">Gobelins</a>
               </h3>
               <p>3D multiplayer collaborative game</p>
-            </a>
+              <div class="links_container">
+                <a
+                href="https://x.com/i/status/1735325870783365588"
+                target="_blank"
+                class="arrow-right"
+                >Trailer</a
+              >
+  
+              <a
+                href="https://drive.google.com/file/d/11HgVRhzsa9RcqgmV8XONwiZ_FG4Blfg0/view?usp=sharing"
+                target="_blank"
+                class="arrow-right"
+                >Documentation</a
+              >
+              </div>
+            
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -121,13 +155,32 @@
               loop
               playsinline
             ></video>
-            <a href="https://www.instagram.com/p/C1UnJv4tR41/" target="_blank">
               <h3>
                 PANDORA - Jewelry Portal
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="https://www.femmefatale.paris/fr">FFS</a>
               </h3>
               <p>AR Filter for pandora immersive box</p>
-            </a>
+
+              <div class="links_container">
+                <a
+                href="https://www.instagram.com/p/C1UnJv4tR41/"
+                target="_blank"
+                class="arrow-right"
+                >View event</a
+              >
+              </div>
+            
+          </div>
+          <div data-lg-parallax data-lg-parallax-amplitude="0.5">
+            <video
+              src="./assets/videos/CARL.mp4"
+              muted
+              autoplay
+              loop
+              playsinline
+            ></video>
+            <h3>The red book <a target="_blank" href="https://www.femmefatale.paris/fr">FFS</a></h3>
+            <p>Interactive Book of <i>Carl Gustav Jung </i> for the Confluance Museum in Lyon</p>
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -137,15 +190,24 @@
               loop
               playsinline
             ></video>
-            <a href="https://small-camp-waterfall.netlify.app/" target="_blank">
               <h3>
-                CHALLENGE Three.js - "Waterfall"
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                CHALLENGE Three.js
+                <a target="_blank" href="#">Perso</a>
               </h3>
               <p>
-                3D Scene totally handmade with Blender and shaders experiments
+                "Waterfall" - 3D Scene totally handmade with Blender and shaders experiments
               </p>
-            </a>
+              <div class="links_container">
+                <a
+                href="https://small-camp-waterfall.netlify.app/"
+                target="_blank"
+                class="arrow-right"
+                >Web site</a
+              >
+              <a href="https://threejs-journey.com/challenges/003-waterfall#
+              " target="_blank" class="arrow-right">Challenge page</a>
+              </div>
+            
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -155,16 +217,27 @@
               loop
               playsinline
             ></video>
-            <a
-              href="https://axis-hub.netlify.app/games/Bedbugs-2a5ceb0a-3614-4fdf-ad4f-dae5bbee90fd"
-              target="_blank"
-            >
               <h3>
                 BUG BEATS
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="https://www.gobelins.fr/">Gobelins</a>
               </h3>
               <p>Rhythm arcade game on AXIS - Gamejam</p>
-            </a>
+
+              <div class="links_container">
+                <a
+                href="https://axis-hub.netlify.app/games/Bedbugs-2a5ceb0a-3614-4fdf-ad4f-dae5bbee90fd"
+                target="_blank"
+                class="arrow-right"
+                >Game page</a
+              >
+              <a
+                href="https://drive.google.com/file/d/1JdyaSfNgE1FnohuMbxydzaVrLGO7XTW1/view?usp=sharing"
+                target="_blank"
+                class="arrow-right"
+                >Documentation</a
+              >
+              </div>
+            
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -174,13 +247,20 @@
               loop
               playsinline
             ></video>
-            <a href="https://metro-orsay.netlify.app/" target="_blank">
               <h3>
                 L'Odyssée du Métro
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="https://www.gobelins.fr/">Gobelins</a>
               </h3>
               <p>Interactive story - History of the Paris subway</p>
-            </a>
+              <div class="links_container">
+                <a
+                href="https://metro-orsay.netlify.app/"
+                target="_blank"
+                class="arrow-right"
+                >Web site</a
+              >
+              </div>
+            
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -190,13 +270,21 @@
               loop
               playsinline
             ></video>
-            <a href="https://more-than-honey.netlify.app/" target="_blank">
               <h3>
                 More than honey
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="https://www.gobelins.fr/">Gobelins</a>
               </h3>
               <p>3D immersive and interactive tale</p>
-            </a>
+              <div class="links_container">
+                <a
+                href="https://more-than-honey.netlify.app/"
+                target="_blank"
+                class="arrow-right"
+                >Web site</a
+              >
+
+              </div>
+            
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -206,13 +294,17 @@
               loop
               playsinline
             ></video>
-            <a href="https://visisco.netlify.app/" target="_blank">
               <h3>
                 Visisco
-                <img src="./assets/external-link.png" alt="" srcset="" />
+                <a target="_blank" href="#">Perso</a>
               </h3>
               <p>3D Sound viewer - Shaders experiment</p>
-            </a>
+              <div class="links_container">
+                <a href="https://visisco.netlify.app/" target="_blank" class="arrow-right"
+                >Web site</a
+              >
+              </div>
+            
           </div>
           <div data-lg-parallax data-lg-parallax-amplitude="0.5">
             <video
@@ -222,28 +314,15 @@
               loop
               playsinline
             ></video>
-            <a href="https://visit.arte.tv/" target="_blank">
               <h3>
-                ARTE <img src="./assets/external-link.png" alt="" srcset="" />
+                ARTE <a target="_blank" href="https://www.upian.com/fr/">UPIAN</a>
               </h3>
               <p>Virtual tour of ARTE Strasbourg's building</p>
-            </a>
-          </div>
-          <div data-lg-parallax data-lg-parallax-amplitude="0.5">
-            <video
-              src="./assets/videos/COVID.mp4"
-              muted
-              autoplay
-              loop
-              playsinline
-            ></video>
-            <a href="https://webgl-just-reveal.netlify.app/" target="_blank">
-              <h3>
-                Covid trends
-                <img src="./assets/external-link.png" alt="" srcset="" />
-              </h3>
-              <p>3D Data visualisation</p>
-            </a>
+              <div class="links_container">
+                <a href="https://visit.arte.tv/" target="_blank" class="arrow-right"
+                >Web site</a
+              >
+              </div>
           </div>
         </div>
       </div>
