@@ -87,10 +87,6 @@ const tick = () => {
 
 const lenis = new Lenis();
 
-document.querySelector("#scroll").addEventListener("click", () => {
-  lenis.scrollTo(document.querySelector("#second"), { offset: -100 });
-});
-
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
