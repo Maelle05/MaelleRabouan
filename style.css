@@ -129,7 +129,7 @@ body::after {
   flex-wrap: wrap;
   justify-content: space-around;
   /* background-color: blue; */
-  gap: 0px 65px;
+  gap: 10px 65px;
   margin-top: 200px;
   margin-bottom: 40px;
 }
