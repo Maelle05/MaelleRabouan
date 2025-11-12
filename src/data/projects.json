@@ -1,0 +1,77 @@
+[
+  {
+    "id": "autofocus",
+    "slug": "autofocus",
+    "title": "Autofocus",
+    "client": "ffs r&d",
+    "client_link": "https://www.femmefatale.paris/fr",
+    "type": "Projets",
+    "tags": ["3D", "WebGl", "Minigames", "Educational"],
+    "category": "Web",
+    "year": 2024,
+    "cover": "/visuals/videos/AUTOFOCUS.mp4",
+    "visuals": ["/visuals/images/AUTOFOCUS.png"],
+    "description": "3D educational website for art gallery creation",
+    "content": "This project allowed me to...",
+    "contributions": [
+      "- Setup the web site architecture (Next.js, Three.js, GSAP)",
+      "- Develop and prototype, 2D and 3D interactions and animations",
+      "- Testing design/dev workflow",
+      "- Develop, setup and test game logique",
+      "- Link to the API (data collection, processing, and transmission)"
+    ],
+    "link": "",
+    "Documentation": "",
+    "teaser": "",
+    "more": ""
+  },
+  {
+    "id": "cote-780",
+    "slug": "cote-780",
+    "title": "Cote 780",
+    "client": "gobelins",
+    "client_link": "https://www.gobelins.fr/",
+    "type": "Projets",
+    "tags": ["3D", "WebGl", "Minigames", "Educational"],
+    "category": "WebGl",
+    "year": 2024,
+    "cover": "/visuals/videos/COTE.mp4",
+    "visuals": [],
+    "description": "Interactive 3D narration of a region's history",
+    "content": "This project allowed me to...",
+    "contributions": [
+      "- Setup the web site architecture (Vue.js, Three.js, GSAP)",
+      "- Develop, test and prototype, 3D interactions",
+      "- Participation in brainstorming and creative sessions",
+      "- Project management",
+      "- 3D animations and Shaders Effects"
+    ],
+    "link": "https://cote-780.netlify.app/",
+    "Documentation": "https://drive.google.com/file/d/1ymhJ3aBtLSAE81oBzRsqtYGFCsy9-S2J/view?usp=sharing",
+    "teaser": "",
+    "more": "https://designinteractif.gobelins.fr/2024/07/01/cote-780-souvenirs-engloutis/"
+  },
+  {
+    "id": "waterfall",
+    "slug": "waterfall",
+    "title": "CHALLENGE Three.js",
+    "client": "perso",
+    "client_link": "",
+    "type": "Lab",
+    "tags": ["3D", "WebGl", "Blender"],
+    "category": "WebGl",
+    "year": 2023,
+    "cover": "/visuals/videos/WATERFALL.mp4",
+    "visuals": [],
+    "description": "Waterfall - 3D Scene totally handmade with Blender and shaders experiments",
+    "content": "This project allowed me to...",
+    "contributions": [
+      "- 3D modeling and baking (Blender)",
+      "- 3D integration, animation, shaders (Three.js)"
+    ],
+    "link": "https://small-camp-waterfall.netlify.app/",
+    "Documentation": "",
+    "teaser": "",
+    "more": "https://threejs-journey.com/challenges/003-waterfall"
+  }
+]
