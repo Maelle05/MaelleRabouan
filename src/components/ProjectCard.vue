@@ -22,11 +22,20 @@ function goToProject() {
     class="group cursor-pointer bg-white dark:bg-gray-900 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl overflow-hidden"
   >
     <div class="overflow-hidden">
-      <img
+      <!-- <img
         :src="project.cover"
         :alt="project.title"
         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
+      /> -->
+      <video
+        :src="project.cover"
+        :alt="project.title"
+        muted
+        autoplay
+        loop
+        playsinline
+        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+      ></video>
     </div>
 
     <div class="p-4">
@@ -52,11 +61,4 @@ function goToProject() {
   </div>
 </template>
 
-<style scoped>
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>
+<style scoped></style>

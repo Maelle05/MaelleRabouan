@@ -14,11 +14,7 @@ const filteredProjects = computed(() => {
 
 <template>
   <div class="p-6">
-    Bienvenue sur mon portfolio ✨
-    <FilterBar
-      :tags="['Vue', 'Design', 'Branding', 'Tailwind']"
-      v-model="selectedTag"
-    />
+    <FilterBar :tags="['Educational', '3D']" v-model="selectedTag" />
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
       <ProjectCard v-for="p in filteredProjects" :key="p.id" :project="p" />
     </div>

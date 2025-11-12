@@ -26,7 +26,6 @@
       </nav>
     </header>
 
-    <!-- Contenu principal -->
     <main class="flex-1 p-6">
       <router-view />
     </main>

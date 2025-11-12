@@ -8,13 +8,22 @@ const project = projects.find((p) => p.slug === route.params.slug);
 
 <template>
   <div class="max-w-3xl mx-auto p-6">
-    <img :src="project.cover" :alt="project.title" class="rounded-2xl mb-4" />
+    <!-- <img :src="project.cover" :alt="project.title" class="rounded-2xl mb-4" /> -->
+    <video
+      :src="'../' + project.cover"
+      :alt="project.title"
+      muted
+      autoplay
+      loop
+      playsinline
+      class="rounded-2xl mb-4"
+    ></video>
     <h1 class="text-3xl font-bold mb-2">{{ project.title }}</h1>
     <div class="flex gap-2 mb-4">
       <span
         v-for="tag in project.tags"
         :key="tag"
-        class="bg-gray-200 text-sm px-2 py-1 rounded"
+        class="border text-sm px-2 py-1 rounded"
         >{{ tag }}</span
       >
     </div>
