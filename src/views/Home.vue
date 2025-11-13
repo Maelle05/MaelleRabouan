@@ -1,15 +1,6 @@
 <script setup>
-import { ref, computed } from "vue";
 import projectsData from "../data/projects.json";
-import FilterBar from "../components/FilterBar.vue";
 import ProjectCard from "../components/ProjectCard.vue";
-
-const selectedTag = ref(null);
-
-const filteredProjects = computed(() => {
-  if (!selectedTag.value) return projectsData;
-  return projectsData.filter((p) => p.tags.includes(selectedTag.value));
-});
 </script>
 
 <template>
@@ -41,10 +32,10 @@ const filteredProjects = computed(() => {
         <span class="stretch-anim h-[10px] w-[1.5px] bg-black"></span>
       </div>
     </div>
-    <div>
-      <FilterBar :tags="['Educational', '3D']" v-model="selectedTag" />
+    <div class="container mx-auto">
+      <h3 class="exerge text-2xl">Latest Projects</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <ProjectCard v-for="p in filteredProjects" :key="p.id" :project="p" />
+        <ProjectCard v-for="p in projectsData" :key="p.id" :project="p" />
       </div>
     </div>
   </div>

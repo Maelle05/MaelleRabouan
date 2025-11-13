@@ -65,11 +65,9 @@
     </header>
 
     <main class="flex-1 p-6">
-      <router-view v-slot="{ Component }">
-        <transition name="page">
-          <component :is="Component" />
-        </transition>
-      </router-view>
+      <Transition name="page">
+        <router-view />
+      </Transition>
     </main>
 
     <!-- Footer -->
