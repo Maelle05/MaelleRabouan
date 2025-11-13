@@ -1,1 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap");
 @import "tailwindcss";
+
+body {
+  font-family: "Questrial", sans-serif;
+}
+
+.logo {
+  font-family: "Archivo Black", sans-serif;
+}
