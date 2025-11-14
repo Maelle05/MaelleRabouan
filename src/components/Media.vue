@@ -18,7 +18,7 @@ function getMediaType(src) {
   if (src.includes("videos")) {
     return "video";
   } else if (src.includes("teasers")) {
-    return "teasers";
+    return "teaser";
   } else {
     return "image";
   }
@@ -43,11 +43,18 @@ function getMediaType(src) {
       playsinline
       :class="addedClass"
     ></video>
+    <h3
+      v-if="getMediaType(src) == 'teaser'"
+      class="mt-10 mb-5 exerge uppercase text-2xl text-center"
+    >
+      Teaser
+    </h3>
     <video
       v-if="getMediaType(src) == 'teaser'"
       :src="src"
       :alt="title"
       :class="addedClass"
+      controls
     ></video>
   </div>
 </template>

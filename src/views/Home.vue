@@ -1,6 +1,8 @@
 <script setup>
 import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard.vue";
+
+const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
 </script>
 
 <template>
@@ -32,10 +34,13 @@ import ProjectCard from "../components/ProjectCard.vue";
         <span class="stretch-anim h-[10px] w-[1.5px] bg-black"></span>
       </div>
     </div>
-    <div class="container mx-auto">
-      <h3 class="exerge text-2xl">Latest Projects</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <ProjectCard v-for="p in projectsData" :key="p.id" :project="p" />
+    <div class="container mx-auto mt-30">
+      <h3 class="exerge text-2xl text-center uppercase">Latest Projects</h3>
+      <p class="text-center">
+        A selection of my recent work. Don't hesitate to click and explore !
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-15">
+        <ProjectCard v-for="p in projectsHome" :key="p.id" :project="p" />
       </div>
     </div>
   </div>
@@ -67,7 +72,7 @@ import ProjectCard from "../components/ProjectCard.vue";
     transform: scaleX(1) scaleY(1);
   }
   50% {
-    transform: scaleX(0.8) scaleY(1.5) translateY(-2px);
+    transform: scaleX(0.5) scaleY(1.5) translateY(-2px);
   }
 }
 </style>
