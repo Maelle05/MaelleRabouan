@@ -22,7 +22,7 @@ function goToProject() {
     <Media
       :src="project.cover"
       :title="project.title"
-      added-class="group-hover:scale-95 transition-transform duration-300 aspect-[496/306]"
+      added-class="group-hover:scale-95 transition-transform duration-300 aspect-[496/306] w-full object-cover"
     />
     <div
       class="relative py-4 group-hover:translate-x-10 transition-transform duration-300 before:transition-all before:delay-100 before:duration-400 before:h-0 before:w-[1px] before:mt-[21px] before:absolute before:opacity-0 before:-start-7 before:top-0 before:bg-black group-hover:before:opacity-50 group-hover:before:h-[70%]"

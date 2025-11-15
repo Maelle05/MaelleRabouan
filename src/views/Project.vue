@@ -20,7 +20,11 @@ const project = projects.find((p) => p.slug === route.params.slug);
     >
       <div v-if="project.client">
         <h3 class="exerge uppercase mb-2">Client</h3>
-        <Link :src="project.client_link" :title="project.client" />
+        <Link
+          :src="project.client_link"
+          :title="project.client"
+          addedClass="pb-2"
+        />
       </div>
       <div
         v-if="project.year"
@@ -38,7 +42,10 @@ const project = projects.find((p) => p.slug === route.params.slug);
       </div>
       <div v-if="project.link" class="flex flex-col md:items-end">
         <h3 class="exerge uppercase mb-2">Link</h3>
-        <Link :src="project.link" title="Visit Website" />
+        <Link
+          :src="project.link"
+          :title="project.isEvent ? 'see the event' : 'Visit Website'"
+        />
       </div>
     </div>
     <div class="max-w-[960px] mx-auto flex flex-col items-center">

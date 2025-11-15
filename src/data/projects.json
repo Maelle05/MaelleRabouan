@@ -1,5 +1,35 @@
 [
   {
+    "id": "kamen-persona",
+    "slug": "kamen-persona",
+    "title": "Kamen - Persona",
+    "subtitle": "AR Narration told on your faces",
+    "client": "Femme Fatale Studio",
+    "client_link": "https://www.femmefatale.paris/fr",
+    "type": "Projets",
+    "isOnHomePage": true,
+    "category": "AR Filter",
+    "tags": ["AR", "3D", "Narration"],
+    "year": 2023,
+    "cover": "src/assets/visuals/videos/KAMEN.mp4",
+    "visuals": [],
+    "card_description": "AR Narration told on your faces",
+    "description": "",
+    "content": "",
+    "stack": ["Lens Studio"],
+    "contributions": [
+      "- Implementation and Development of interactions",
+      "- Participation in brainstorming and creative sessions",
+      "- Test & Prototype",
+      "- Shaders Effects"
+    ],
+    "isEvent": false,
+    "isOther": true,
+    "link": "https://www.femmefatale.paris/fr/project/persona-ar",
+    "documentation_title": "",
+    "documentation": ""
+  },
+  {
     "id": "cote-780",
     "slug": "cote-780",
     "title": "Cote 780",
@@ -28,9 +58,40 @@
       "- Participation in brainstorming and creative sessions",
       "- 3D animations and Shaders Effects"
     ],
+    "isEvent": false,
+    "isOther": false,
     "link": "https://cote-780.netlify.app/",
     "documentation_title": "conception file",
     "documentation": "https://drive.google.com/file/d/1ymhJ3aBtLSAE81oBzRsqtYGFCsy9-S2J/view?usp=sharing"
+  },
+  {
+    "id": "pandora-jewelry-portal",
+    "slug": "pandora-jewelry-portal",
+    "title": "Jewelry Portal",
+    "subtitle": "Pandora immersive box",
+    "client": "Femme Fatale Studio",
+    "client_link": "https://www.femmefatale.paris/fr",
+    "type": "Projets",
+    "isOnHomePage": true,
+    "category": "AR Filter",
+    "tags": ["AR", "3D"],
+    "year": 2023,
+    "cover": "src/assets/visuals/videos/PANDORA.mp4",
+    "visuals": [],
+    "card_description": "AR Filter for pandora immersive box",
+    "description": "AR Filter for pandora immersive box",
+    "content": "",
+    "stack": ["Spark AR"],
+    "contributions": [
+      "- Project setup",
+      "- Participation in brainstorming and creative sessions",
+      "- Tracking, Shaders, 3D Integration, Particule effects and animations"
+    ],
+    "isEvent": true,
+    "isOther": false,
+    "link": "https://www.instagram.com/p/C1UnJv4tR41/",
+    "documentation_title": "",
+    "documentation": ""
   },
   {
     "id": "olympic-medal-rush",
@@ -61,6 +122,8 @@
       "- Link to the API and server (data collection, processing, and transmission)",
       "- Participation in brainstorming and creative sessions"
     ],
+    "isEvent": false,
+    "isOther": false,
     "link": "",
     "documentation_title": "conception file",
     "documentation": "https://drive.google.com/file/d/11HgVRhzsa9RcqgmV8XONwiZ_FG4Blfg0/view?usp=sharing"
@@ -90,6 +153,8 @@
       "- Develop, setup and test game logique",
       "- Link to the API (data collection, processing, and transmission)"
     ],
+    "isEvent": false,
+    "isOther": false,
     "link": "",
     "documentation_title": "",
     "documentation": ""
@@ -109,13 +174,15 @@
     "cover": "src/assets/visuals/videos/WATERFALL.mp4",
     "visuals": [],
     "card_description": "Blender and shaders experiments",
-    "description": "Blender and shaders experiments",
-    "content": "Creating a 3D scene representing a waterfall from scratch in a few days",
+    "description": "Creating a 3D scene representing a waterfall from scratch in a few days",
+    "content": "Blender and shaders experiments",
     "stack": ["Blender", "Three.js"],
     "contributions": [
       "- 3D modeling and baking",
       "- 3D integration, animation, shaders"
     ],
+    "isEvent": false,
+    "isOther": false,
     "link": "https://small-camp-waterfall.netlify.app/",
     "documentation_title": "challenge website",
     "documentation": "https://threejs-journey.com/challenges/003-waterfall"
