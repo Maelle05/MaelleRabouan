@@ -58,6 +58,7 @@ console.log("addedClass prop:", props.addedClass);
     :src="src"
     :alt="title"
     :class="addedClass"
+    preload="auto"
     controls
   ></video>
 </template>

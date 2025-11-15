@@ -48,7 +48,7 @@ const project = projects.find((p) => p.slug === route.params.slug);
         :title="project.title"
         addedClass="w-full object-contain"
       />
-      <p v-if="project.content" class="my-6 max-w-[700px] text-center">
+      <p v-if="project.content" class="my-10 max-w-[700px] text-center">
         {{ project.content }}
       </p>
       <div class="w-full flex flex-col items-center gap-5">
