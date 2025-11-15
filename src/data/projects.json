@@ -39,7 +39,14 @@
     "type": "Projets",
     "isOnHomePage": true,
     "category": "Transmedia",
-    "tags": ["WebGl", "Minigames", "Educational", "Transmedia", "3D"],
+    "tags": [
+      "WebGl",
+      "Minigames",
+      "Educational",
+      "Transmedia",
+      "3D",
+      "Narration"
+    ],
     "year": 2024,
     "cover": "src/assets/visuals/videos/COTE.mp4",
     "visuals": [
@@ -103,7 +110,7 @@
     "type": "Projets",
     "isOnHomePage": true,
     "category": "Webgl Multiplayer Game",
-    "tags": ["WebGl", "Games", "JO", "3D", "multiplayer"],
+    "tags": ["WebGl", "Game", "3D"],
     "year": 2023,
     "cover": "src/assets/visuals/videos/OMR.mp4",
     "visuals": [
@@ -127,6 +134,31 @@
     "link": "",
     "documentation_title": "conception file",
     "documentation": "https://drive.google.com/file/d/11HgVRhzsa9RcqgmV8XONwiZ_FG4Blfg0/view?usp=sharing"
+  },
+  {
+    "id": "the-red-book",
+    "slug": "the-red-book",
+    "title": "The red book",
+    "subtitle": "Exhibition “dream” Confluance Museum in Lyon",
+    "client": "Femme Fatale Studio",
+    "client_link": "https://www.femmefatale.paris/fr",
+    "type": "Projets",
+    "isOnHomePage": false,
+    "category": "Installation",
+    "tags": ["Installation", "2D"],
+    "year": 2024,
+    "cover": "src/assets/visuals/videos/CARL.mp4",
+    "visuals": [],
+    "card_description": "Interactive Book of Carl Gustav Jung",
+    "description": "Interactive Book of Carl Gustav Jung",
+    "content": "",
+    "stack": ["Electron", "JS", "GSAP"],
+    "contributions": ["- Integration, Animations"],
+    "isEvent": false,
+    "isOther": false,
+    "link": "",
+    "documentation_title": "",
+    "documentation": ""
   },
   {
     "id": "autofocus",
