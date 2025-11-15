@@ -3,10 +3,12 @@
     "id": "autofocus",
     "slug": "autofocus",
     "title": "Autofocus",
-    "client": "ffs r&d",
+    "subtitle": "",
+    "client": "Femme Fatale Studio r&d",
     "client_link": "https://www.femmefatale.paris/fr",
     "type": "Projets",
     "isOnHomePage": false,
+    "category": "Educational 3D website",
     "tags": ["3D", "WebGl", "Minigames", "Educational"],
     "year": 2024,
     "cover": "src/assets/visuals/videos/AUTOFOCUS.mp4",
@@ -14,6 +16,7 @@
     "card_description": "3D educational website for art gallery creation",
     "description": "3D educational website for art gallery creation",
     "content": "This project allowed me to...",
+    "stack": ["Vue.js", "Three.js", "GSAP"],
     "contributions": [
       "- Setup the web site architecture (Next.js, Three.js, GSAP)",
       "- Develop and prototype, 2D and 3D interactions and animations",
@@ -22,6 +25,7 @@
       "- Link to the API (data collection, processing, and transmission)"
     ],
     "link": "",
+    "documentation_title": "",
     "documentation": ""
   },
   {
