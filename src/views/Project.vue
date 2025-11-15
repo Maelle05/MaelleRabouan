@@ -44,7 +44,13 @@ const project = projects.find((p) => p.slug === route.params.slug);
         <h3 class="exerge uppercase mb-2">Link</h3>
         <Link
           :src="project.link"
-          :title="project.isEvent ? 'see the event' : 'Visit Website'"
+          :title="
+            project.isOther
+              ? 'more info'
+              : project.isEvent
+              ? 'see the event'
+              : 'Visit Website'
+          "
         />
       </div>
     </div>

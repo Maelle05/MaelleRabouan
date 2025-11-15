@@ -110,7 +110,7 @@
     "type": "Projets",
     "isOnHomePage": true,
     "category": "Webgl Multiplayer Game",
-    "tags": ["WebGl", "Game", "3D"],
+    "tags": ["WebGl", "Games", "3D"],
     "year": 2023,
     "cover": "src/assets/visuals/videos/OMR.mp4",
     "visuals": [
@@ -192,6 +192,35 @@
     "documentation": ""
   },
   {
+    "id": "bug-beats",
+    "slug": "bug-beats",
+    "title": "BUG BEATS",
+    "subtitle": "Kremlin Groove Brigade !",
+    "client": "Gobelins Project",
+    "client_link": "https://www.gobelins.fr/",
+    "type": "Projets",
+    "isOnHomePage": false,
+    "category": "Game",
+    "tags": ["Installation", "2D", "Games"],
+    "year": 2023,
+    "cover": "src/assets/visuals/videos/BUGBEATS.mp4",
+    "visuals": [],
+    "card_description": "Rhythm arcade game on AXIS - Gamejam",
+    "description": "Rhythm arcade game on AXIS - Gamejam",
+    "content": "3 days Gamejam with randomly selected themes",
+    "stack": ["JS"],
+    "contributions": [
+      "- Participation in brainstorming and creative sessions",
+      "- Integration, Game Logic, Animations",
+      "- Project management"
+    ],
+    "isEvent": false,
+    "isOther": false,
+    "link": "https://axis-hub.netlify.app/games/Bedbugs-2a5ceb0a-3614-4fdf-ad4f-dae5bbee90fd",
+    "documentation_title": "conception file",
+    "documentation": "https://drive.google.com/file/d/1JdyaSfNgE1FnohuMbxydzaVrLGO7XTW1/view?usp=sharing"
+  },
+  {
     "id": "waterfall",
     "slug": "waterfall",
     "title": "Challenge Three.js journey",
@@ -218,5 +247,35 @@
     "link": "https://small-camp-waterfall.netlify.app/",
     "documentation_title": "challenge website",
     "documentation": "https://threejs-journey.com/challenges/003-waterfall"
+  },
+  {
+    "id": "metro-orsay",
+    "slug": "metro-orsay",
+    "title": "The Metro Odyssey",
+    "subtitle": "Orsay Museum",
+    "client": "Gobelins Project",
+    "client_link": "https://www.gobelins.fr/",
+    "type": "Projets",
+    "isOnHomePage": false,
+    "category": "Narration Website",
+    "tags": ["2D", "Narration", "Educational"],
+    "year": 2021,
+    "cover": "src/assets/visuals/videos/METRO.mp4",
+    "visuals": [],
+    "card_description": "2D Narration about Paris subway",
+    "description": "2D Narration website about the history of the Paris subway",
+    "content": "",
+    "stack": ["JS"],
+    "contributions": [
+      "- Participation in brainstorming and creative sessions",
+      "- Integration, Animations",
+      "- Project management",
+      "- Storytelling"
+    ],
+    "isEvent": false,
+    "isOther": false,
+    "link": "https://metro-orsay.netlify.app/",
+    "documentation_title": "",
+    "documentation": ""
   }
 ]
