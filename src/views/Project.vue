@@ -41,25 +41,27 @@ const project = projects.find((p) => p.slug === route.params.slug);
         <Link :src="project.link" title="Visit Website" />
       </div>
     </div>
-    <div class="flex flex-col items-center">
+    <div class="max-w-[960px] mx-auto flex flex-col items-center">
       <p class="mb-10 max-w-[700px] text-center">{{ project.description }}</p>
-      <div class="max-w-[960px]">
-        <Media :src="'../' + project.cover" :title="project.title" />
-      </div>
-      <p v-if="project.content" class="my-6 text-center">
+      <Media
+        :src="'../' + project.cover"
+        :title="project.title"
+        addedClass="w-full object-contain"
+      />
+      <p v-if="project.content" class="my-6 max-w-[700px] text-center">
         {{ project.content }}
       </p>
-      <div class="max-w-[960px] flex flex-col items-center gap-5">
+      <div class="w-full flex flex-col items-center gap-5">
         <Media
           v-for="v in project.visuals"
           :key="v.id"
           :src="'../' + v"
           :title="project.title"
-          addedClass="w-full"
+          addedClass="w-full object-contain"
         />
       </div>
       <div
-        class="max-w-[960px] mt-20 w-full flex flex-col md:flex-row gap-10 justify-between"
+        class="mt-10 w-full flex flex-col md:flex-row gap-10 justify-between"
       >
         <div>
           <h3 class="exerge uppercase mb-2">My contributions</h3>
@@ -92,7 +94,7 @@ const project = projects.find((p) => p.slug === route.params.slug);
             <Link
               :src="project.documentation"
               :title="project.documentation_title"
-              added-class="-mb-1"
+              added-class="h-[28px]"
             />
           </div>
         </div>
@@ -101,13 +103,13 @@ const project = projects.find((p) => p.slug === route.params.slug);
         v-if="project.type == 'Lab'"
         src="/lab"
         title="see more in lab"
-        added-class="my-20"
+        added-class="mb-20 mt-30"
       />
       <BigLink
         v-if="project.type == 'Projets'"
         src="/projects"
         title="see more projects"
-        added-class="my-20"
+        added-class="mb-20 mt-30"
       />
     </div>
   </div>
