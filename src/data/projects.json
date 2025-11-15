@@ -22,9 +22,7 @@
       "- Link to the API (data collection, processing, and transmission)"
     ],
     "link": "",
-    "Documentation": "",
-    "teaser": "",
-    "more": ""
+    "documentation": ""
   },
   {
     "id": "cote-780",
@@ -36,7 +34,7 @@
     "type": "Projets",
     "isOnHomePage": true,
     "category": "Transmedia",
-    "tags": ["WebGl", "Minigames", "Educational", "Transmedia"],
+    "tags": ["WebGl", "Minigames", "Educational", "Transmedia", "3D"],
     "year": 2024,
     "cover": "src/assets/visuals/videos/COTE.mp4",
     "visuals": [
@@ -45,43 +43,44 @@
       "src/assets/visuals/teasers/COTE-Teaser.mp4"
     ],
     "card_description": "Interactive transmedia narration of a region's history",
-    "description": "Interactive 3D narration of a region's history",
-    "content": "This project allowed me to...",
+    "description": "Cote 780 - is a transmedia tale about the history of the lake of Serre Ponçon. A combination of a physical journey around the lake and an interactive 3D web experience. With the help of a booklet-map, you will follow and help Milo in this quest.",
+    "content": "",
     "stack": ["Vue.js", "Three.js", "GSAP"],
     "contributions": [
-      "- Setup the web site architecture (Vue.js, Three.js, GSAP)",
+      "- Project management",
+      "- Setup the web site architecture",
       "- Develop, test and prototype, 3D interactions",
       "- Participation in brainstorming and creative sessions",
-      "- Project management",
       "- 3D animations and Shaders Effects"
     ],
     "link": "https://cote-780.netlify.app/",
-    "documentation": "https://drive.google.com/file/d/1ymhJ3aBtLSAE81oBzRsqtYGFCsy9-S2J/view?usp=sharing",
-    "teaser": "",
-    "more": "https://designinteractif.gobelins.fr/2024/07/01/cote-780-souvenirs-engloutis/"
+    "documentation_title": "conception file",
+    "documentation": "https://drive.google.com/file/d/1ymhJ3aBtLSAE81oBzRsqtYGFCsy9-S2J/view?usp=sharing"
   },
   {
     "id": "waterfall",
     "slug": "waterfall",
     "title": "Challenge Three.js journey",
-    "client": "perso",
+    "subtitle": "003 - Waterfall",
+    "client": "Personal Project",
     "client_link": "",
     "type": "Lab",
     "isOnHomePage": false,
+    "category": "WebGl / Blender",
     "tags": ["3D", "WebGl", "Blender"],
     "year": 2023,
     "cover": "src/assets/visuals/videos/WATERFALL.mp4",
     "visuals": [],
     "card_description": "Blender and shaders experiments",
     "description": "Blender and shaders experiments",
-    "content": "This project allowed me to... Waterfall - 3D Scene totally handmade with",
+    "content": "Creating a 3D scene representing a waterfall from scratch in a few days",
+    "stack": ["Blender", "Three.js"],
     "contributions": [
-      "- 3D modeling and baking (Blender)",
-      "- 3D integration, animation, shaders (Three.js)"
+      "- 3D modeling and baking",
+      "- 3D integration, animation, shaders"
     ],
     "link": "https://small-camp-waterfall.netlify.app/",
-    "Documentation": "",
-    "teaser": "",
-    "more": "https://threejs-journey.com/challenges/003-waterfall"
+    "documentation_title": "challenge website",
+    "documentation": "https://threejs-journey.com/challenges/003-waterfall"
   }
 ]
