@@ -18,16 +18,28 @@ function selectTag(tag) {
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-2">
+  <p class="mb-1">Filter by :</p>
+  <div class="flex flex-wrap gap-2 max-w-[600px]">
+    <button
+      @click="selectTag(null)"
+      class="px-3 py-1 text-sm rounded-full border transition-colors duration-200 cursor-pointer"
+      :class="[
+        modelValue === null
+          ? 'bg-black text-white border-black'
+          : 'bg-[#f5f5f5] border-black text-black hover:bg-black hover:text-white',
+      ]"
+    >
+      All
+    </button>
     <button
       v-for="tag in tags"
       :key="tag"
       @click="selectTag(tag)"
-      class="px-3 py-1 text-sm rounded-full border transition-colors duration-200"
+      class="px-3 py-1 text-sm rounded-full border transition-colors duration-200 cursor-pointer"
       :class="[
         modelValue === tag
-          ? 'bg-indigo-600 text-white border-indigo-600'
-          : 'bg-white dark:bg-gray-900 border-gray-300 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-800',
+          ? 'bg-black text-white border-black'
+          : 'bg-[#f5f5f5] border-black text-black hover:bg-black hover:text-white',
       ]"
     >
       {{ tag }}

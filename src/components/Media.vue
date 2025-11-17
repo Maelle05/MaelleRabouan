@@ -23,8 +23,6 @@ function getMediaType(src) {
     return "image";
   }
 }
-
-console.log("addedClass prop:", props.addedClass);
 </script>
 
 <template>
