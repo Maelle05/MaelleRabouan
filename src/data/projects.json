@@ -103,7 +103,7 @@
     "type": "Projets",
     "isOnHomePage": true,
     "category": "Webgl Multiplayer Game",
-    "tags": ["Interactive website", "Games"],
+    "tags": ["Games"],
     "year": 2023,
     "cover": "src/assets/visuals/videos/OMR.mp4",
     "visuals": [
