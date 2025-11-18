@@ -57,6 +57,7 @@ const project = projects.find((p) => p.slug === route.params.slug);
     <div class="max-w-[960px] mx-auto flex flex-col items-center">
       <p class="mb-10 max-w-[700px] text-center">{{ project.description }}</p>
       <Media
+        v-if="project.showCoverInPage"
         :src="'../' + project.cover"
         :title="project.title"
         addedClass="w-full object-contain"

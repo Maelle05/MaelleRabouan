@@ -23,8 +23,7 @@ const filteredProjects = computed(() => {
 <template>
   <div class="container mx-auto">
     <div class="mt-20 mb-10 flex flex-col items-center">
-      <h1 class="exerge text-4xl mb-2">Projects</h1>
-      <p>test lalalala</p>
+      <h1 class="exerge text-4xl">Projects</h1>
     </div>
     <FilterBar :tags="projectsProTags" v-model="selectedTag" />
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
