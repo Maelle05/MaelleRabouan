@@ -10,11 +10,9 @@ const props = defineProps({
   },
   addedClass: {
     type: String,
-    required: true,
+    required: false,
   },
 });
-
-console.log(props.src.value);
 </script>
 
 <template>

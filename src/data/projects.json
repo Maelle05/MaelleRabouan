@@ -233,7 +233,8 @@
     "stack": ["Blender", "Three.js"],
     "contributions": [
       "- 3D modeling and baking",
-      "- 3D integration, animation, shaders"
+      "- 3D integration, animation, shaders",
+      "- All"
     ],
     "isEvent": false,
     "isOther": false,
@@ -284,7 +285,7 @@
     "tags": ["Narration", "Educational", "Interactive website"],
     "year": 2022,
     "cover": "src/assets/visuals/videos/MTH.mp4",
-    "visuals": [],
+    "visuals": ["src/assets/visuals/teasers/MTH-Teaser-mini.mp4"],
     "card_description": "3D immersive and interactive tale",
     "description": "3D immersive and interactive tale",
     "content": "",
