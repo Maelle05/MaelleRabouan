@@ -47,7 +47,7 @@
         <Transition name="fade-stagger">
           <div
             v-if="menuOpen"
-            class="absolute top-full h-[calc(100vh-64px)] left-0 w-full bg-white/95 md:hidden flex flex-col items-center justify-around py-20 z-10"
+            class="absolute top-full h-[calc(100dvh-64px)] left-0 w-full bg-white/95 md:hidden flex flex-col items-center justify-around py-20 z-10"
           >
             <router-link
               v-for="link in navLinks"
