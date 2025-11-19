@@ -7,7 +7,7 @@ import BigLink from "@/components/BigLink.vue";
     <div class="flex-1 flex justify-center">
       <img
         class="md:w-[70%] max-w-[400px] object-contain"
-        src="../assets/moi-2.jpeg"
+        src="../../public/assets/moi-2.jpeg"
       />
     </div>
     <div class="flex-1 flex flex-col justify-center">

@@ -11,7 +11,7 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
       class="relative w-full h-[calc(100vh-64px)] flex flex-col justify-center items-center"
     >
       <img
-        src="../assets/moi.png"
+        src="../../public/assets/moi.png"
         draggable="false"
         class="w-[150px] rounded-full mb-[15px]"
       />
