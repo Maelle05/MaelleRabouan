@@ -51,6 +51,7 @@ const project = projects.find((p) => p.slug === route.params.slug);
               ? 'see the event'
               : 'Visit Website'
           "
+          arrow="true"
         />
       </div>
     </div>
@@ -109,6 +110,7 @@ const project = projects.find((p) => p.slug === route.params.slug);
               :src="project.documentation"
               :title="project.documentation_title"
               added-class="h-[28px]"
+              arrow="true"
             />
           </div>
         </div>

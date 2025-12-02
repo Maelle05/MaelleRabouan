@@ -90,8 +90,7 @@ const menuOpen = ref(false);
 const navLinks = [
   { name: "Projects", path: "/projects" },
   { name: "Lab", path: "/lab" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "About/Contact", path: "/contact" },
 ];
 
 function toggleMenu() {

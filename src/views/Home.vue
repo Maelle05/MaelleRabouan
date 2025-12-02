@@ -1,6 +1,7 @@
 <script setup>
 import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard.vue";
+import BigLink from "@/components/BigLink.vue";
 
 const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
 </script>
@@ -41,6 +42,13 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
       </p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-15 mb-30">
         <ProjectCard v-for="p in projectsHome" :key="p.id" :project="p" />
+      </div>
+      <div class="flex justify-center mb-30">
+        <BigLink
+          title="let's talk !"
+          src="/contact"
+          addedClass="max-w-max overflow-hidden"
+        />
       </div>
     </div>
   </div>
