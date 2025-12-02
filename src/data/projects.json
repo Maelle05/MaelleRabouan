@@ -74,7 +74,7 @@
     "client": "Femme Fatale Studio",
     "client_link": "https://www.femmefatale.paris/fr",
     "type": "Projets",
-    "isOnHomePage": true,
+    "isOnHomePage": false,
     "category": "AR Filter",
     "tags": ["Augmented Reality"],
     "year": 2023,
