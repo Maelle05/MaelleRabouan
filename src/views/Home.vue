@@ -11,11 +11,11 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
       class="relative w-full h-[calc(100vh-64px)] flex flex-col justify-center items-center"
     >
       <img
-        src="../../public/assets/moi.png"
+        src="/assets/moi.png"
         draggable="false"
         class="w-[150px] rounded-full mb-[15px]"
       />
-      <h1 class="exerge text-3xl">MAËLLE RABOUAN</h1>
+      <h1 class="exerge text-3xl text-center">MAËLLE RABOUAN</h1>
       <h2 class="text-xl">Creative developer</h2>
       <h3 class="text-xl mb-[120px]">
         Alumnus from

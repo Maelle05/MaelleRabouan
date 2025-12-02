@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#f5f5f5] text-black flex flex-col min-h-screen">
+  <div class="relative bg-[#f5f5f5] text-black flex flex-col min-h-screen">
     <!-- Navbar -->
     <header class="sticky top-0 z-10 bg-[#f5f5f5]">
       <div class="relative p-4 flex justify-between items-center">
@@ -64,14 +64,17 @@
       </div>
     </header>
 
-    <main class="flex-1 p-6">
+    <!-- WebGl -->
+    <canvas id="webgl" class="fixed top-0 left-0 h-full w-full z-0"></canvas>
+
+    <main class="flex-1 p-6 z-1">
       <Transition name="page">
         <router-view />
       </Transition>
     </main>
 
     <!-- Footer -->
-    <footer class="py-4 text-center text-sm text-gray-500">
+    <footer class="py-4 text-center text-sm text-gray-500 z-1">
       © {{ new Date().getFullYear() }} Maëlle Rabouan — All rights reserved
     </footer>
   </div>
