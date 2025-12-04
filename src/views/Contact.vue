@@ -16,8 +16,8 @@ import Link from "../components/Link.vue";
         <br />
         <br />
         I love crafting digital experiences where code, visuals, and emotion
-        come together to tell stories and spark curiosity. ✨ I’m also driven by
-        a deep desire to learn, explore, and experiment!
+        come together to tell stories and spark curiosity. I’m also driven by a
+        deep desire to learn, explore, and experiment!
         <br />
         <br />
         Persevering, dynamic, and motivated, with three years of experience in
@@ -28,13 +28,13 @@ import Link from "../components/Link.vue";
         And, I just came back from a long journey across Latin America, which
         truly shaped the way I create. It taught me to stay curious and
         open-minded. Qualities I now try to bring into every project, from
-        experimental concepts to more crafted interactive pieces. 🖌️
+        experimental concepts to more crafted interactive pieces.
       </p>
       <div
         class="p-6 mt-20 mb-10 md:mb-30 flex flex-col justify-center items-center"
       >
-        <h1 class="exerge text-2xl text-center">I’d love to hear from you.</h1>
-        <p class="text-center">
+        <h1 class="exerge text-2xl">I’d love to hear from you.</h1>
+        <p class="">
           Would you like to collaborate, just discuss, or create something
           unique together?
         </p>

@@ -16,8 +16,8 @@ import BigLink from "@/components/BigLink.vue";
         <br />
         <br />
         I love crafting digital experiences where code, visuals, and emotion
-        come together to tell stories and spark curiosity. ✨ I’m also driven by
-        a deep desire to learn, explore, and experiment!
+        come together to tell stories and spark curiosity. I’m also driven by a
+        deep desire to learn, explore, and experiment!
         <br />
         <br />
         Persevering, dynamic, and motivated, with three years of experience in
@@ -28,7 +28,7 @@ import BigLink from "@/components/BigLink.vue";
         And, I just came back from a long journey across Latin America, which
         truly shaped the way I create. It taught me to stay curious and
         open-minded. Qualities I now try to bring into every project, from
-        experimental concepts to more crafted interactive pieces. 🖌️
+        experimental concepts to more crafted interactive pieces.
       </p>
       <div class="flex justify-center mt-15">
         <BigLink

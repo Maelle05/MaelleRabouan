@@ -1,56 +1,38 @@
 import * as THREE from "three";
-
-const vertexShader = `
-  varying vec2 vUv;
-  void main() {
-    vUv = uv;
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-  }
-`;
-
-const fragmentShader = `
-  precision highp float;
-
-  varying vec2 vUv;
-  uniform float u_time;
-  uniform float u_speed;
-  uniform vec2 u_mouse;
-  uniform vec2 u_resolution;
-  uniform float u_pixelRatio;
-
-  void main() {
-    vec2 st = vUv;
-    vec3 baseColor = vec3(0.96); //#F5F5F5
-    vec3 rippleColor = vec3(0.8);
-
-    // Correction du ratio écran
-    vec2 aspect = vec2(u_resolution.x / u_resolution.y, 1.0);
-
-    vec2 pos = (st - u_mouse) * aspect;
-
-    float dist = length(pos);
-
-    // Création d'une onde sinusoïdale qui se propage depuis le point touché
-    float ripple = 0.03 * sin(30.0 * dist - 3.0 * u_time) / (dist + 0.01);
-    ripple *= u_speed;
-
-    // Couleurs
-    vec3 color = mix(baseColor, rippleColor, ripple * 2.0);
-
-    gl_FragColor = vec4(color, 1.0);
-    // gl_FragColor = vec4(vUv, 1.0, 1.0);
-  }
-`;
+import {
+  renderFragmentShader,
+  renderVertexShader,
+  simulationFragmentShader,
+  simulationVertexShader,
+} from "./shaders";
 
 export default class WebGlManager {
   constructor(canvas) {
     this.canvas = canvas;
-    this.sceneReady = false;
-    this.scene = new THREE.Scene();
+
+    // STATES ------------------------------------------------------
     this.sizes = {
       width: window.innerWidth,
       height: window.innerHeight,
     };
+    // mouse smoothing
+    this.mouse = { x: 0.5, y: 0.5 }; // cible
+    this.mouseLerp = { x: 0.5, y: 0.5 }; // lissé
+    this.frame = 0;
+    this.clock = new THREE.Clock();
+
+    // RENDERER ------------------------------------------------------
+    this.renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+      alpha: true,
+      preserveDrawingBuffer: true,
+    });
+    this.updateRendererSize();
+
+    this.sceneReady = false;
+    this.scene = new THREE.Scene();
+    this.simScene = new THREE.Scene();
     this.camera = new THREE.OrthographicCamera(
       -1, // left
       1, // right
@@ -60,18 +42,28 @@ export default class WebGlManager {
       1 // far
     );
     this.scene.add(this.camera);
-    this.renderer = new THREE.WebGLRenderer({
-      canvas: canvas,
-      antialias: true,
-    });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     this.renderer.setSize(this.sizes.width, this.sizes.height);
 
-    this.clock = new THREE.Clock();
+    this.options = {
+      format: THREE.RGBAFormat,
+      type: THREE.FloatType,
+      minFilter: THREE.LinearFilter,
+      magFilter: THREE.LinearFilter,
+      stencilBuffer: false,
+      depthBuffer: false,
+    };
 
-    // mouse smoothing
-    this.mouse = { x: 0.5, y: 0.5 }; // cible
-    this.mouseLerp = { x: 0.5, y: 0.5 }; // lissé
+    this.rtA = new THREE.WebGLRenderTarget(
+      this.sizes.width,
+      this.sizes.height,
+      this.options
+    );
+    this.rtB = new THREE.WebGLRenderTarget(
+      this.sizes.width,
+      this.sizes.height,
+      this.options
+    );
 
     this.init();
     this.addEventListeners();
@@ -80,27 +72,51 @@ export default class WebGlManager {
 
   init() {
     // Full screen plane
-    const geometry = new THREE.PlaneGeometry(2, 2); // couvre l'écran (avec perspective OK)
+    const geometry = new THREE.PlaneGeometry(2, 2); // couvre l'écran
+
     this.uniforms = {
-      u_time: { value: 0 },
-      u_mouse: { value: new THREE.Vector2(0.5, 0.5) },
-      u_speed: { value: 1 },
-      u_resolution: {
+      textureA: { value: null },
+      mouse: { value: this.mouse },
+      resolution: {
         value: new THREE.Vector2(this.sizes.width, this.sizes.height),
       },
-      u_pixelRatio: { value: Math.min(window.devicePixelRatio || 1, 2) },
+      time: { value: 0 },
+      frame: { value: 0 },
     };
 
-    const material = new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
+    this.simMaterial = new THREE.ShaderMaterial({
       uniforms: this.uniforms,
-      depthTest: false,
-      depthWrite: false,
+      vertexShader: simulationVertexShader,
+      fragmentShader: simulationFragmentShader,
     });
 
-    this.plane = new THREE.Mesh(geometry, material);
-    this.scene.add(this.plane);
+    this.renderMaterial = new THREE.ShaderMaterial({
+      uniforms: {
+        textureA: { value: null },
+        textureB: { value: null },
+      },
+      vertexShader: renderVertexShader,
+      fragmentShader: renderFragmentShader,
+      transparent: true,
+    });
+
+    this.simPlane = new THREE.Mesh(geometry, this.simMaterial);
+    this.renderPlane = new THREE.Mesh(geometry, this.renderMaterial);
+
+    this.simScene.add(this.simPlane);
+    this.scene.add(this.renderPlane);
+
+    this.drawCanvas = document.createElement("canvas");
+    this.drawCanvas.width = this.sizes.width;
+    this.drawCanvas.height = this.sizes.height;
+    this.ctx = this.drawCanvas.getContext("2d", { alpha: true });
+    this.ctx.fillStyle = "#f5F5F5";
+    this.ctx.fillRect(0, 0, this.sizes.width, this.sizes.height);
+
+    this.canvasTexture = new THREE.CanvasTexture(this.drawCanvas);
+    this.canvasTexture.minFilter = THREE.LinearFilter;
+    this.canvasTexture.magFilter = THREE.LinearFilter;
+    this.canvasTexture.format = THREE.RGBAFormat;
 
     this.sceneReady = true;
   }
@@ -127,6 +143,15 @@ export default class WebGlManager {
     window.addEventListener("resize", this.onResize);
   }
 
+  // --------------------------------------------------------------
+  // RESIZE
+
+  updateRendererSize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    this.renderer.setPixelRatio(dpr);
+    this.renderer.setSize(this.sizes.width, this.sizes.height);
+  }
+
   resize() {
     this.sizes.width = window.innerWidth;
     this.sizes.height = window.innerHeight;
@@ -136,9 +161,15 @@ export default class WebGlManager {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.renderer.setPixelRatio(dpr);
     this.renderer.setSize(this.sizes.width, this.sizes.height);
+    this.rtA.setSize(this.sizes.width, this.sizes.height);
+    this.rtB.setSize(this.sizes.width, this.sizes.height);
+    this.drawCanvas.width = this.sizes.width;
+    this.drawCanvas.height = this.sizes.height;
+    this.ctx.fillStyle = "#f5F5F5";
+    this.ctx.fillRect(0, 0, this.sizes.width, this.sizes.height);
+    this.canvasTexture.needsUpdate = true;
 
-    this.uniforms.u_resolution.value.set(this.sizes.width, this.sizes.height);
-    this.uniforms.u_pixelRatio.value = dpr;
+    this.uniforms.resolution.value.set(this.sizes.width, this.sizes.height);
   }
 
   // simple lerp helper
@@ -147,30 +178,34 @@ export default class WebGlManager {
   }
 
   tick() {
-    // update time
     const elapsed = this.clock.getElapsedTime();
 
-    // smooth mouse: lerp toward target
-    const smoothing = 0.12; // plus petit = plus lent
+    const smoothing = 0.16;
     this.mouseLerp.x = this.lerp(this.mouseLerp.x, this.mouse.x, smoothing);
     this.mouseLerp.y = this.lerp(this.mouseLerp.y, this.mouse.y, smoothing);
 
-    // Distance entre la souris réelle et la souris lissée
-    const dx = this.mouse.x - this.mouseLerp.x;
-    const dy = this.mouse.y - this.mouseLerp.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    // Clamp / normalisation entre 0 et 1
-    const maxSpeed = 0.005;
-    // const speed = Math.min(dist / maxSpeed, 1.0);
-    const speed = 0;
+    // UPDATE UNIFORMS
+    this.uniforms.frame.value = this.frame++;
+    this.uniforms.time.value = elapsed;
 
-    // update uniforms
-    this.uniforms.u_time.value = elapsed;
-    this.uniforms.u_speed.value = speed;
-    this.uniforms.u_mouse.value.set(this.mouseLerp.x, this.mouseLerp.y);
+    this.uniforms.mouse.value.x = this.mouseLerp.x;
+    this.uniforms.mouse.value.y = this.mouseLerp.y;
+
+    this.uniforms.textureA.value = this.rtA.texture;
 
     if (this.sceneReady) {
+      // PING PONG
+      this.renderer.setRenderTarget(this.rtB);
+      this.renderer.render(this.simScene, this.camera);
+
+      this.renderMaterial.uniforms.textureA.value = this.rtB.texture;
+      this.renderMaterial.uniforms.textureB.value = this.canvasTexture;
+      this.renderer.setRenderTarget(null);
       this.renderer.render(this.scene, this.camera);
+
+      const temp = this.rtA;
+      this.rtA = this.rtB;
+      this.rtB = temp;
     }
   }
 }
