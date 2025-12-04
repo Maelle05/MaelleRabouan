@@ -49,7 +49,7 @@ void main(){
   pVel -= 0.005 * delta * pressure;
 
   pVel *= 1.0 - 0.002 * delta;
-  pressure *= 0.999;
+  pressure *= 0.993;
 
   vec2 mouseUV = mouse;
   if(mouse.x > 0.0) {

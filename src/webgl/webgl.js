@@ -172,24 +172,15 @@ export default class WebGlManager {
     this.uniforms.resolution.value.set(this.sizes.width, this.sizes.height);
   }
 
-  // simple lerp helper
-  lerp(a, b, t) {
-    return a + (b - a) * t;
-  }
-
   tick() {
     const elapsed = this.clock.getElapsedTime();
-
-    const smoothing = 0.16;
-    this.mouseLerp.x = this.lerp(this.mouseLerp.x, this.mouse.x, smoothing);
-    this.mouseLerp.y = this.lerp(this.mouseLerp.y, this.mouse.y, smoothing);
 
     // UPDATE UNIFORMS
     this.uniforms.frame.value = this.frame++;
     this.uniforms.time.value = elapsed;
 
-    this.uniforms.mouse.value.x = this.mouseLerp.x;
-    this.uniforms.mouse.value.y = this.mouseLerp.y;
+    this.uniforms.mouse.value.x = this.mouse.x;
+    this.uniforms.mouse.value.y = this.mouse.y;
 
     this.uniforms.textureA.value = this.rtA.texture;
 
