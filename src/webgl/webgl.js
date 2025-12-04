@@ -16,10 +16,10 @@ export default class WebGlManager {
       height: window.innerHeight,
     };
     // mouse smoothing
-    this.mouse = { x: 0.5, y: 0.5 }; // cible
-    this.mouseLerp = { x: 0.5, y: 0.5 }; // lissé
+    this.mouse = { x: 0, y: 0 };
     this.frame = 0;
     this.clock = new THREE.Clock();
+    this.sceneReady = false;
 
     // RENDERER ------------------------------------------------------
     this.renderer = new THREE.WebGLRenderer({
@@ -30,21 +30,12 @@ export default class WebGlManager {
     });
     this.updateRendererSize();
 
-    this.sceneReady = false;
+    // SCENES ------------------------------------------------------
     this.scene = new THREE.Scene();
     this.simScene = new THREE.Scene();
-    this.camera = new THREE.OrthographicCamera(
-      -1, // left
-      1, // right
-      1, // top
-      -1, // bottom
-      -1, // near
-      1 // far
-    );
-    this.scene.add(this.camera);
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    this.renderer.setSize(this.sizes.width, this.sizes.height);
+    this.camera = new THREE.OrthographicCamera(-1, 1, 1, -1, -1, 1);
 
+    // RENDERER Target ----------------------------------------------
     this.options = {
       format: THREE.RGBAFormat,
       type: THREE.FloatType,
@@ -71,7 +62,7 @@ export default class WebGlManager {
   }
 
   init() {
-    // Full screen plane
+    // Init Sheader
     const geometry = new THREE.PlaneGeometry(2, 2); // couvre l'écran
 
     this.uniforms = {
@@ -106,12 +97,14 @@ export default class WebGlManager {
     this.simScene.add(this.simPlane);
     this.scene.add(this.renderPlane);
 
+    // Init Canvat tex
+
     this.drawCanvas = document.createElement("canvas");
     this.drawCanvas.width = this.sizes.width;
     this.drawCanvas.height = this.sizes.height;
     this.ctx = this.drawCanvas.getContext("2d", { alpha: true });
-    this.ctx.fillStyle = "#f5F5F5";
-    this.ctx.fillRect(0, 0, this.sizes.width, this.sizes.height);
+
+    this.drawCanvasfunc();
 
     this.canvasTexture = new THREE.CanvasTexture(this.drawCanvas);
     this.canvasTexture.minFilter = THREE.LinearFilter;
@@ -119,6 +112,11 @@ export default class WebGlManager {
     this.canvasTexture.format = THREE.RGBAFormat;
 
     this.sceneReady = true;
+  }
+
+  drawCanvasfunc() {
+    this.ctx.fillStyle = "#f5F5F5";
+    this.ctx.fillRect(0, 0, this.sizes.width, this.sizes.height);
   }
 
   addEventListeners() {
@@ -158,15 +156,16 @@ export default class WebGlManager {
     this.camera.aspect = this.sizes.width / this.sizes.height;
     this.camera.updateProjectionMatrix();
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    this.renderer.setPixelRatio(dpr);
-    this.renderer.setSize(this.sizes.width, this.sizes.height);
+    this.updateRendererSize();
+
     this.rtA.setSize(this.sizes.width, this.sizes.height);
     this.rtB.setSize(this.sizes.width, this.sizes.height);
+
     this.drawCanvas.width = this.sizes.width;
     this.drawCanvas.height = this.sizes.height;
-    this.ctx.fillStyle = "#f5F5F5";
-    this.ctx.fillRect(0, 0, this.sizes.width, this.sizes.height);
+
+    this.drawCanvasfunc();
+
     this.canvasTexture.needsUpdate = true;
 
     this.uniforms.resolution.value.set(this.sizes.width, this.sizes.height);
@@ -185,7 +184,6 @@ export default class WebGlManager {
     this.uniforms.textureA.value = this.rtA.texture;
 
     if (this.sceneReady) {
-      // PING PONG
       this.renderer.setRenderTarget(this.rtB);
       this.renderer.render(this.simScene, this.camera);
 
