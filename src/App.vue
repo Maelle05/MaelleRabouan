@@ -2,7 +2,12 @@
   <div class="relative bg-[#f5f5f5] text-black flex flex-col min-h-screen">
     <!-- Navbar -->
     <header
-      class="sticky top-0 z-10 bg-gradient-to-b from-[#f5f5f5] to-[#f5f5f500]"
+      class="sticky top-0 z-10"
+      :class="
+        menuOpen
+          ? 'bg-[#f5f5f5]'
+          : 'bg-gradient-to-b from-[#f5f5f5] to-[#f5f5f500]'
+      "
     >
       <div class="relative p-4 flex justify-between items-center">
         <router-link
