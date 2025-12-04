@@ -4,9 +4,24 @@ import projects from "../data/projects.json";
 import Media from "@/components/Media.vue";
 import BigLink from "@/components/BigLink.vue";
 import Link from "@/components/Link.vue";
+import Related from "@/components/Related.vue";
+import { ref, watch } from "vue";
 
 const route = useRoute();
-const project = projects.find((p) => p.slug === route.params.slug);
+const project = ref(null);
+
+function loadProject() {
+  project.value = projects.find((p) => p.slug === route.params.slug);
+}
+
+loadProject();
+
+watch(
+  () => route.params.slug,
+  () => {
+    loadProject();
+  }
+);
 </script>
 
 <template>
@@ -115,18 +130,14 @@ const project = projects.find((p) => p.slug === route.params.slug);
           </div>
         </div>
       </div>
-      <BigLink
-        v-if="project.type == 'Lab'"
-        src="/lab"
-        title="see more in lab"
-        added-class="mb-20 mt-30"
-      />
-      <BigLink
-        v-if="project.type == 'Projets'"
-        src="/projects"
-        title="see more projects"
-        added-class="mb-20 mt-30"
-      />
+      <div class="flex justify-center mt-30">
+        <BigLink
+          title="let's talk !"
+          src="/contact"
+          addedClass="max-w-max overflow-hidden"
+        />
+      </div>
+      <Related :dedId="project.id" />
     </div>
   </div>
 </template>
