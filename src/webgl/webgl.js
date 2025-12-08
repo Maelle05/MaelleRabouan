@@ -133,7 +133,11 @@ export default class WebGlManager {
       this.mouse.x = x / this.sizes.width;
       this.mouse.y = 1.0 - y / this.sizes.height; // vUv has origin bottom-left? We used 0..1 top->bottom; invert for nicer mapping
     };
+
     window.addEventListener("pointermove", this.onPointerMove, {
+      passive: true,
+    });
+    window.addEventListener("click", this.onPointerMove, {
       passive: true,
     });
 
