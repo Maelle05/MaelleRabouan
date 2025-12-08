@@ -48,7 +48,7 @@ void main(){
 
   pVel -= 0.005 * delta * pressure;
 
-  pVel *= 1.0 - 0.004 * delta;
+  pVel *= 1.0 - 0.01 * delta;
   pressure *= 0.993;
 
   vec2 mouseUV = mouse;
