@@ -130,13 +130,6 @@ watch(
           </div>
         </div>
       </div>
-      <div class="flex justify-center mt-30">
-        <BigLink
-          title="let's talk !"
-          src="/contact"
-          addedClass="max-w-max overflow-hidden"
-        />
-      </div>
       <Related :dedId="project.id" />
     </div>
   </div>

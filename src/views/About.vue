@@ -1,6 +1,4 @@
-<script setup>
-import BigLink from "@/components/BigLink.vue";
-</script>
+<script setup></script>
 
 <template>
   <div class="p-6 flex flex-col md:flex-row gap-10">
@@ -30,13 +28,6 @@ import BigLink from "@/components/BigLink.vue";
         open-minded. Qualities I now try to bring into every project, from
         experimental concepts to more crafted interactive pieces.
       </p>
-      <div class="flex justify-center mt-15">
-        <BigLink
-          title="let's talk !"
-          src="/contact"
-          addedClass="max-w-max overflow-hidden"
-        />
-      </div>
     </div>
   </div>
 </template>

@@ -40,15 +40,8 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
       <p class="text-center">
         A selection of my recent work. Don't hesitate to click and explore !
       </p>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-15 mb-30">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-15">
         <ProjectCard v-for="p in projectsHome" :key="p.id" :project="p" />
-      </div>
-      <div class="flex justify-center mb-30">
-        <BigLink
-          title="let's talk !"
-          src="/contact"
-          addedClass="max-w-max overflow-hidden"
-        />
       </div>
     </div>
   </div>

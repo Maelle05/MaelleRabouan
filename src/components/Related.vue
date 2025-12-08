@@ -37,7 +37,7 @@ watch(
 
 <template>
   <div class="w-full">
-    <h3 class="exerge mt-30 md:mt-20 uppercase mb-2 text-2xl">
+    <h3 class="exerge mt-30 md:mt-30 uppercase mb-2 text-2xl">
       to explore more :
     </h3>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-3">

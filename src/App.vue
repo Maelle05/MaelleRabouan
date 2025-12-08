@@ -81,8 +81,32 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-4 text-center text-sm text-gray-500 z-1">
-      © {{ new Date().getFullYear() }} Maëlle Rabouan — All rights reserved
+    <footer class="z-1">
+      <div class="p-6 mt-30 mb-30 flex flex-col justify-center items-center">
+        <h1 class="exerge text-2xl">I’d love to hear from you.</h1>
+        <p class="text-center">
+          Would you like to collaborate, just discuss, or create something
+          unique together?
+        </p>
+        <h2 class="uppercase mt-10 mb-2 exerge">Email</h2>
+        <Link
+          title="maelle.rabouan@gmail.com"
+          src="mailto:maelle.rabouan@gmail.com"
+        />
+        <h2 class="uppercase mt-5 mb-2 exerge">Follow Me</h2>
+        <div
+          class="flex flex-col justify-center items-center md:flex-row gap-5"
+        >
+          <Link
+            title="LinkedIn"
+            src="https://www.linkedin.com/in/ma%C3%ABlle-rabouan-4b0776194/"
+          />
+          <Link title="Twitter" src="https://x.com/maelle_rabouan" />
+        </div>
+      </div>
+      <div class="py-4 text-center text-sm text-gray-500 z-1">
+        © {{ new Date().getFullYear() }} Maëlle Rabouan — All rights reserved
+      </div>
     </footer>
   </div>
 </template>
@@ -90,6 +114,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { ref } from "vue";
+import Link from "./components/Link.vue";
 const route = useRoute();
 const isActive = (path) => route.path === path;
 const menuOpen = ref(false);
@@ -97,7 +122,7 @@ const menuOpen = ref(false);
 const navLinks = [
   { name: "Projects", path: "/projects" },
   { name: "Lab", path: "/lab" },
-  { name: "About/Contact", path: "/contact" },
+  { name: "About", path: "/about" },
 ];
 
 function toggleMenu() {
