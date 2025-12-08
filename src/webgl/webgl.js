@@ -120,6 +120,20 @@ export default class WebGlManager {
   }
 
   addEventListeners() {
+    let inactivityTimer;
+    const idleDelay = 300; // ms avant reset (change si besoin)
+
+    // Reset si inactif
+    const resetMouse = () => {
+      this.mouse.x = 0;
+      this.mouse.y = 0;
+    };
+
+    const restartInactivityTimer = () => {
+      clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(resetMouse, idleDelay);
+    };
+
     // pointer for mouse + touch unified
     this.onPointerMove = (e) => {
       const x =
@@ -135,13 +149,20 @@ export default class WebGlManager {
       const newY = 1.0 - y / this.sizes.height;
 
       const threshold = 0.0005; // Ajuste la sensibilité
+      let updated = false;
 
       if (Math.abs(newX - this.mouse.x) > threshold) {
         this.mouse.x = newX;
+        updated = true;
       }
 
       if (Math.abs(newY - this.mouse.y) > threshold) {
         this.mouse.y = newY;
+        updated = true;
+      }
+
+      if (updated) {
+        restartInactivityTimer();
       }
     };
 
