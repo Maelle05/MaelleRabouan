@@ -130,8 +130,19 @@ export default class WebGlManager {
         e.clientY !== undefined
           ? e.clientY
           : (e.touches && e.touches[0].clientY) || 0;
-      this.mouse.x = x / this.sizes.width;
-      this.mouse.y = 1.0 - y / this.sizes.height; // vUv has origin bottom-left? We used 0..1 top->bottom; invert for nicer mapping
+
+      const newX = x / this.sizes.width;
+      const newY = 1.0 - y / this.sizes.height;
+
+      const threshold = 0.0005; // Ajuste la sensibilité
+
+      if (Math.abs(newX - this.mouse.x) > threshold) {
+        this.mouse.x = newX;
+      }
+
+      if (Math.abs(newY - this.mouse.y) > threshold) {
+        this.mouse.y = newY;
+      }
     };
 
     window.addEventListener("pointermove", this.onPointerMove, {
