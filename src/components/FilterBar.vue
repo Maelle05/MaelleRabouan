@@ -26,7 +26,7 @@ function selectTag(tag) {
       :class="[
         modelValue === null
           ? 'bg-black text-white border-black'
-          : 'bg-[#f5f5f5] border-black text-black hover:bg-black hover:text-white',
+          : 'bg-transparent border-black text-black hover:bg-black hover:text-white',
       ]"
     >
       All
@@ -39,7 +39,7 @@ function selectTag(tag) {
       :class="[
         modelValue === tag
           ? 'bg-black text-white border-black'
-          : 'bg-[#f5f5f5] border-black text-black hover:bg-black hover:text-white',
+          : 'bg-transparent border-black text-black hover:bg-black hover:text-white',
       ]"
     >
       {{ tag }}
