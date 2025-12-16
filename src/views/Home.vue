@@ -1,7 +1,7 @@
 <script setup>
 import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard.vue";
-import BigLink from "@/components/BigLink.vue";
+import Btn from "@/components/Btn.vue";
 
 const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
 </script>
@@ -43,6 +43,7 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-15">
         <ProjectCard v-for="p in projectsHome" :key="p.id" :project="p" />
       </div>
+      <Btn title="Discover other projects" src="/projects" />
     </div>
   </div>
 </template>

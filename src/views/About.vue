@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Btn from "@/components/Btn.vue";
+</script>
 
 <template>
   <div class="p-6 flex flex-col md:flex-row gap-10">
@@ -28,6 +30,11 @@
         open-minded. Qualities I now try to bring into every project, from
         experimental concepts to more crafted interactive pieces.
       </p>
+      <Btn
+        title="Take a look at my resume"
+        isBlank
+        src="https://drive.google.com/file/d/16VEMiGoGnTlVEEgK0s-5bHp4GB2559pu/view?usp=sharing"
+      />
     </div>
   </div>
 </template>

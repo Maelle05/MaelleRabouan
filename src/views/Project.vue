@@ -2,7 +2,6 @@
 import { useRoute } from "vue-router";
 import projects from "../data/projects.json";
 import Media from "@/components/Media.vue";
-import BigLink from "@/components/BigLink.vue";
 import Link from "@/components/Link.vue";
 import Related from "@/components/Related.vue";
 import { ref, watch } from "vue";
