@@ -133,6 +133,35 @@
     "documentation": "https://drive.google.com/file/d/11HgVRhzsa9RcqgmV8XONwiZ_FG4Blfg0/view?usp=sharing"
   },
   {
+    "id": "sally-gabori",
+    "slug": "sally-gabori",
+    "title": "Sally Gabori",
+    "subtitle": "Fondation Cartier pour l’Art Contemporain",
+    "client": "Upian",
+    "client_link": "https://www.upian.com/fr/project/sally-gabori",
+    "type": "Projets",
+    "isOnHomePage": false,
+    "category": "Interactive website",
+    "tags": ["Interactive website", "Educational"],
+    "year": 2022,
+    "cover": "/assets/visuals/videos/SALLY.mp4",
+    "showCoverInPage": true,
+    "visuals": [],
+    "card_description": "Tribute website to the work of the aboriginal artist Sally Gabori",
+    "description": "Website created for the Fondation Cartier pour l’Art Contemporain as a tribute to the work of the aboriginal artist Sally Gabori.",
+    "content": "",
+    "stack": ["Vue.js", "Nuxt", "GSAP"],
+    "contributions": [
+      "- UI Integration, effects and animations",
+      "- Participation in brainstorming and creative sessions"
+    ],
+    "isEvent": false,
+    "isOther": false,
+    "link": "https://sally-gabori.fondationcartier.com/",
+    "documentation_title": "",
+    "documentation": ""
+  },
+  {
     "id": "the-red-book",
     "slug": "the-red-book",
     "title": "The red book",
