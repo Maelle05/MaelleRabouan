@@ -33,7 +33,7 @@ import Btn from "@/components/Btn.vue";
       <Btn
         title="Take a look at my resume"
         isBlank
-        src="https://drive.google.com/file/d/16VEMiGoGnTlVEEgK0s-5bHp4GB2559pu/view?usp=sharing"
+        src="https://drive.google.com/file/d/1SqqBfAh9d-eumrNmLvdB0p_shNorufNY/view?usp=drive_link"
       />
     </div>
   </div>
