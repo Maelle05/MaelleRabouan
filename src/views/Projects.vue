@@ -3,6 +3,7 @@ import { ref, computed } from "vue";
 import projectsData from "../data/projects.json";
 import FilterBar from "../components/FilterBar.vue";
 import ProjectCard from "../components/ProjectCard.vue";
+import Btn from "@/components/Btn.vue";
 
 const selectedTag = ref(null);
 const projectsPro = projectsData.filter((p) => p.type == "Projets");
@@ -29,5 +30,7 @@ const filteredProjects = computed(() => {
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
       <ProjectCard v-for="p in filteredProjects" :key="p.id" :project="p" />
     </div>
+    <Btn title="Take a look at my lab" src="/lab" />
   </div>
 </template>
+x
