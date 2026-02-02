@@ -17,7 +17,7 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
         class="w-[150px] rounded-full mb-[15px]"
       />
       <h1 class="exerge text-3xl text-center">MAËLLE RABOUAN</h1>
-      <h2 class="text-xl">Creative developer</h2>
+      <h2 class="text-xl">Creative Spirit</h2>
       <h3 class="text-xl mb-[120px]">
         Alumnus from
         <a

@@ -12,12 +12,12 @@ import Btn from "@/components/Btn.vue";
     </div>
     <div class="flex-1 flex flex-col justify-center">
       <p class="">
-        Hi, I’m Maëlle, a French creative developer.
+        Hi, I’m Maëlle, a French creative spirit.
         <br />
         <br />
-        I love crafting digital experiences where code, visuals, and emotion
-        come together to tell stories and spark curiosity. I’m also driven by a
-        deep desire to learn, explore, and experiment!
+        I love crafting digital experiences where technology, visuals, and
+        emotion come together to tell stories and spark curiosity. I’m also
+        driven by a deep desire to learn, explore, and experiment!
         <br />
         <br />
         Persevering, dynamic, and motivated, with three years of experience in
