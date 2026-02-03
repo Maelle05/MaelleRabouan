@@ -121,7 +121,7 @@ const menuOpen = ref(false);
 
 const navLinks = [
   { name: "Projects", path: "/projects" },
-  { name: "Lab", path: "/lab" },
+  // { name: "Lab", path: "/lab" },
   { name: "About", path: "/about" },
 ];
 
