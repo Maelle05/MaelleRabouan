@@ -13,7 +13,7 @@
     "year": 2023,
     "cover": "/assets/visuals/videos/KAMEN.mp4",
     "showCoverInPage": true,
-    "visuals": [],
+    "visuals": ["assets/visuals/teasers/KAMEN-Teaser.mp4"],
     "card_description": "AR Narration told on your faces",
     "description": "Kamen - is a very short narrative program about kamen (仮面), which means “ephemeral faces,” an integral part of an ancient tradition in Japanese culture. The masks come to life and tell their stories on your face in a playful, immersive, and educational way.",
     "content": "",
