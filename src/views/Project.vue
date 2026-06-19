@@ -106,7 +106,7 @@ watch(
         <div class="max-w-[200px] flex flex-col gap-10 md:gap-5">
           <div v-if="project.stack != []" class="flex flex-col md:items-end">
             <h3 class="exerge uppercase mb-2 md:text-right">Stack</h3>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 md:justify-end">
               <span
                 v-for="stack in project.stack"
                 :key="stack"
@@ -123,6 +123,13 @@ watch(
             <Link
               :src="project.documentation"
               :title="project.documentation_title"
+              added-class="h-[28px]"
+              arrow="true"
+            />
+            <Link
+              v-if="project.documentation_2 != '' && project.documentation_title_2 != ''"
+              :src="project.documentation_2"
+              :title="project.documentation_title_2"
               added-class="h-[28px]"
               arrow="true"
             />

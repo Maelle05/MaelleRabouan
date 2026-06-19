@@ -17,16 +17,9 @@ const projectsHome = projectsData.filter((p) => p.isOnHomePage == true);
         class="w-[150px] rounded-full mb-[15px]"
       />
       <h1 class="exerge text-3xl text-center">MAËLLE RABOUAN</h1>
-      <h2 class="text-xl">Creative Spirit</h2>
-      <h3 class="text-xl mb-[120px]">
-        Alumnus from
-        <a
-          href="https://www.gobelins.fr/"
-          target="_blank"
-          class="relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-[1.5px] after:bg-black after:w-0 after:transition-all after:duration-300 hover:after:w-full"
-        >
-          Gobelins Paris
-        </a>
+      <h2 class="text-xl">Creative Tech, Data & AI</h2>
+      <h3 class="mb-[120px] text-center">
+         Projects with a touch of design and creativity
       </h3>
       <div
         class="absolute bottom-5 uppercase text-sm flex flex-col items-center"
