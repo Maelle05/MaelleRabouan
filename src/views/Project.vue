@@ -5,6 +5,7 @@ import Media from "@/components/Media.vue";
 import Link from "@/components/Link.vue";
 import Related from "@/components/Related.vue";
 import { ref, watch } from "vue";
+import Btn from "@/components/Btn.vue";
 
 const route = useRoute();
 const project = ref(null);
@@ -127,7 +128,7 @@ watch(
               arrow="true"
             />
             <Link
-              v-if="project.documentation_2 != '' && project.documentation_title_2 != ''"
+              v-if="project.documentation_2 != '' && project.documentation_title_2 != '' && project.documentation_2 != null && project.documentation_title_2 != null"
               :src="project.documentation_2"
               :title="project.documentation_title_2"
               added-class="h-[28px]"
@@ -136,6 +137,17 @@ watch(
           </div>
         </div>
       </div>
+      <Btn v-if="project.link"
+          :title="
+            project.isOther
+              ? 'more info'
+              : project.isEvent
+              ? 'see the event'
+              : 'Visit Website'
+          "
+          :src="project.link"
+          isBlank="true"
+      />
       <Related :dedId="project.id" />
     </div>
   </div>
